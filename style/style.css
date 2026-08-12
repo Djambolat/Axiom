@@ -1,4 +1,4 @@
-body{
+body {
   font-family: Arial, sans-serif;
   background-color: #151515;
   color: #ffffff;
@@ -6,7 +6,7 @@ body{
   font-size: 18px;
 }
 
-.header{
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,24 +16,24 @@ body{
   border-radius: 10px;
 }
 
-.navigation-list{
+.navigation-list {
   list-style-type: none;
   display: flex;
   margin: 0;
   padding: 0;
 }
 
-.navigation-list li{
+.navigation-list li {
   margin-left: 20px;
 }
 
-li a{
+li a {
   text-decoration: none;
   color: #ffffff;
   font-weight: bold;
 }
 
-.title{
+.title {
   font-size: 24px;
   font-weight: bold;
   margin-top: 20px;
@@ -46,14 +46,14 @@ li a{
   border-radius: 10px;
 }
 
-.list-languages{
+.list-languages {
   display: flex;
   justify-content: center;
   margin-top: 20px;
   flex-wrap: wrap;
 }
 
-.list-languages li{
+.list-languages li {
   margin: 10px;
   padding: 10px 20px;
   background-color: #232323;
@@ -67,7 +67,7 @@ li a{
   align-items: center;
 }
 
-.team-info{
+.team-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
