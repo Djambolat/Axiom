@@ -22,12 +22,6 @@ body {
   padding-bottom: 20px;
 }
 
-.clear-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -47,27 +41,27 @@ body {
 
 .header__link {
   border: none;
-  padding: 15px;
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: 400;
+  padding: 13px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
   transition: background-color 0.2s ease;
-  background-color: #33b333;
+  background-color: #3368b3;
 }
 
 .header__link:hover {
-  background-color: #33b3339a;
+  background-color: #3368b3c3;
 }
 
 .header__logo {
   font-size: 25px;
+  font-weight: bold;
 }
 
 .header__link,
 .header__logo {
   text-decoration: none;
   color: #ffffff;
-  font-weight: bold;
 }
 
 .hero {
@@ -84,12 +78,12 @@ body {
 }
 
 .hero__title {
-  font-size: 30px;
+  font-size: clamp(20px, 5vw, 30px);
   font-weight: bold;
 }
 
 .hero__subtitle {
-  font-size: 20px;
+  font-size: clamp(13px, 3vw, 20px);
 }
 
 .categories {
@@ -101,10 +95,10 @@ body {
 }
 
 .category-card {
-  min-width: 400px;
+  width: 100%;
+  max-width: 400px;
   min-height: 100px;
   padding: 25px;
-  background-color: #232323;
   border: 2px solid #aaaaaa;
   background-color: #b33353;
   border-radius: 5px;
