@@ -1,28 +1,51 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Axiom</title>
     <link rel="stylesheet" href="./style/style.css" />
   </head>
   <body>
-    <div class="header">
-      <span class="logo">Axiom</span>
-      <ul class="navigation-list">
-        <li class="nav-item"><a href="pages/courses.html">Курсы</a></li>
-        <li class="nav-item"><a href="pages/about.html">О нас</a></li>
-      </ul>
+    <div class="container">
+      <header class="header">
+        <a href="index.html" class="header__logo">Axiom</a>
+        <nav class="header__nav">
+          <a href="./pages/navigation/guide.html" class="header__link">Гайд для чайников</a>
+        </nav>
+      </header>
+      <section class="hero">
+        <h1 class="hero__title">Материалы курса веб-разработки</h1>
+        <p class="hero__subtitle">
+          Всё, что нужно для практики веб-разработки здесь
+        </p>
+      </section>
+      <section class="categories">
+        <a href="./pages/categories/html-css.html" class="category-card">
+          <span class="category-card__title">HTML / CSS</span>
+        </a>
+        <a href="./pages/categories/js.html" class="category-card">
+          <span class="category-card__title">JavaScript</span>
+        </a>
+        <a href="./pages/categories/git.html" class="category-card">
+          <span class="category-card__title">Git</span>
+        </a>
+        <a href="./pages/categories/bem.html" class="category-card">
+          <span class="category-card__title">BEM</span>
+        </a>
+        <a href="./pages/categories/vscode.html" class="category-card">
+          <span class="category-card__title">VS Code</span>
+        </a>
+        <a href="./pages/categories/homeworks.html" class="category-card">
+          <span class="category-card__title">Homeworks</span>
+        </a>
+      </section>
+      <footer class="footer">
+        <p class="footer__text">Axiom &mdash; 2026</p>
+        <p class="footer__text">всякие иконки</p>
+      </footer>
     </div>
-    <div class="title">Welcome to Axiom</div>
-    <ul class="list-languages">
-      <li>HTML/CSS</li>
-      <li>JavaScript</li>
-      <li>Git</li>
-      <li>BEM</li>
-      <li>VS Code</li>
-      <li>AI</li>
-    </ul>
-    <div class="team-info">контакты команды</div>
+
+    <script src="script/script.js"></script>
   </body>
 </html>

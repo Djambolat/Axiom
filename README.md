@@ -16,48 +16,17 @@
 
 ## Макет
 
-![layout-desktop](./images/layout-desktop.jpg)
-![layout-mobile](./images/layout-mobile.jpg)
-
-## Структура проекта
-
-```
-axiom/
-├── index.html
-├── pages/
-│   ├── courses.html    (бывший materials.html)
-│   ├── about.html
-│   ├── html-css.html
-│   ├── js.html          (бывший javascript.html)
-│   ├── git.html
-│   ├── bem.html
-│   ├── vscode.html
-│   └── ai.html
-├── style/
-│   ├── style.css
-│   ├── variables.css
-│   ├── reset.css
-│   └── components/
-│       ├──
-│       ├──
-│       └──
-├── script/
-│   └── script.js
-├── images/
-├── icons/
-└── README.md
-```
 
 ## Работа с ветками
 
-Формат названия: `название_изменения--branch`
+Правила наименования веток:
 
-пример:
-
-- `add_header_style--branch` — добавил стили в шапку
-- `add_background--branch` — добавил задний фон
-
-Не работаем напрямую в `main`. Каждое изменение — через отдельную ветку и Pull Request.
+- если добавили фичу - feature/описание
+- если пофиксили баг - bugfix/описание
+- если изменили форматирование без функционала - style/описание
+- если изменили что то просто для оптимизации - perf/описание
+- если добавили или изменили документацию, комментарии readme - docs/описание
+- если внесли что то просто протестировать. test/описание
 
 ## Правила коммитов
 
