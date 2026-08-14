@@ -116,7 +116,9 @@ body {
 .category-card__title {
   color: #ffffff;
   font-weight: bold;
-  font-size: 22px;
+  font-size: clamp(15px, 5vw, 22px);
+  text-align: center;
+
 }
 
 .footer {
