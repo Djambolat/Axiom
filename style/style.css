@@ -58,6 +58,16 @@ body {
   font-weight: bold;
 }
 
+.header__page-title {
+  font-size: 25px;
+  font-weight: bold;
+}
+.header__page-title::after {
+  content: " //";
+  font-size: 30px;
+  color:#3368b3
+}
+
 .header__link,
 .header__logo {
   text-decoration: none;
@@ -129,4 +139,18 @@ body {
   background-color: #232323;
   border: 2px solid #aaaaaa;
   border-radius: 10px;
+}
+
+.content__accordion {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+  color:#ffffff;
+  background-color: #3368b3;
+}
+.content__main {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
