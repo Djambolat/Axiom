@@ -1,0 +1,25 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.content__accordion {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+  color: #ffffff;
+  background-color: #3368b3;
+  padding: 12px;
+}
+
+.content__text {
+  line-height: 1.6;
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
