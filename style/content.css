@@ -17,6 +17,7 @@
 .content__text {
   line-height: 1.6;
   white-space: pre-wrap;
+  color: rgb(182, 182, 182);
 }
 
 .content__list {

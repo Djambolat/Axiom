@@ -2,9 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background-color: #232323;
-  border: 2px solid #aaaaaa;
+  padding: 10px;
+  background-color: #1b2235;
+  border: 1px solid #292e3a;
   border-radius: 10px;
 }
 
