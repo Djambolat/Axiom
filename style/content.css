@@ -24,3 +24,30 @@
   flex-direction: column;
   gap: 20px;
 }
+
+.subTitle {
+  background-color: #3368b3;
+  color: #ffffff;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.codeText{
+  color: rgb(21, 174, 21);
+  background-color: rgb(0, 44, 68);
+}
+
+.responsive-iframe {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  border: none;
+  display: block;
+}
+@media (min-width: 768px) {
+  .responsive-iframe {
+  width: 80%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
+}
+}
