@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
 * {
   box-sizing: border-box;
 }
@@ -19,20 +18,20 @@ li {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #151515d6;
+  font-family: 'Inter', sans-serif;
+  background-color: #0c0c17;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .container {
-  margin: 0 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-
+  margin: 0 auto;
+  padding:16px 0 24px;
+  width: min(1400px ,calc(100%-24px));
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 20px;
+  max-width: 1400px;
 }
 
 .page-main {
@@ -44,54 +43,69 @@ body {
   display: none;
 }
 
+.page-main__content {
+  flex: 1;
+  min-width: 0;
+}
+
 .page-main__hero {
-  background-color: #3368b3;
+  background: linear-gradient(120deg,#3368b3, #5847d7) ;
   min-height: 200px;
   border-radius: 10px;
   margin-bottom: 50px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  text-align: start;
   gap: 20px;
+  position: relative;
+  padding:36px ;
+}
+
+.page-main__hero::after{
+  content: "</>";
+  color: #7466df;
+  position: absolute;
+  right: 32px;
+  bottom: 12px;
+  font: 700 110px monospace;
+  transform: rotate(-8deg);
 }
 
 .adaptive-text-big {
   font-size: clamp(20px, 5vw, 30px);
-  font-weight: bold;
+  font-weight: 700;
+  z-index: 1;
 }
 
 .adaptive-text-medium {
   font-size: clamp(13px, 3vw, 20px);
+  z-index: 1;
 }
 
 
 .page-main__categories {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 }
 
 
 .categories__card {
-  width: 35vw;
-  max-width: 400px;
+  position: relative;
   min-height: 100px;
   padding: 25px;
-  border: 2px solid #aaaaaa;
-  background-color: #b33353;
+  border: 1px solid #292e3a;
+  background-color: #1b2235;
   border-radius: 5px;
   text-decoration: none;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.2s ease;
+  align-items: flex-end;
+  transition: transform .2s ease, border-color .2s ease, background-color .2s ease;
 }
 
 .categories__card:hover {
-  background-color: #b33353b2;
+  background-color: #262f49;
 }
 
 .categories__card-title {
@@ -106,7 +120,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #232323;
+  background-color: #1b2235;
   border: 2px solid #aaaaaa;
   border-radius: 10px;
 }
+

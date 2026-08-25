@@ -1,10 +1,10 @@
 @media (min-width: 768px) {
   .sidebar {
     display: block;
-    flex: 0 0 20%;
+    flex: 0 0 255px;
     border-radius: 10px;
-    background-color: #232323;
-    border: 2px solid #aaaaaa;
+    background-color: #1b2235;
+    border: 1px solid #292e3a;
     padding: 15px;
   }
 
@@ -29,8 +29,9 @@
   }
 
   .sidebar__block {
-    border: 2px solid #aaaaaa;
+    border: 1px solid #292e3a;
     padding: 10px;
+    background-color: #181e30;
     border-radius: 10px;
 
     display: flex;
