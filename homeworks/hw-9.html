@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style/style.css">
   <link rel="stylesheet" href="../style/header.css">
   <link rel="stylesheet" href="../style/content.css">
-  <title>Document</title>
+  <title>Домашнее задание №9 — Axiom</title>
 </head>
 <body>
   <div class="container">
@@ -48,9 +48,9 @@
           sort() — сортирует элементы массива.
           
   Пример:  <p class="codeText">const fruits = ['яблоко', 'банан'];
-  fruits.push('апельсин'); // Изменил исходный массив fruits
+fruits.push('апельсин'); // Изменил исходный массив fruits
 
-  console.log(fruits); // ['яблоко', 'банан', 'апельсин']</p>
+console.log(fruits); // ['яблоко', 'банан', 'апельсин']</p>
 
           <b>Немутирующие методы (Безопасные)</b>
           Эти методы НЕ трогают исходный массив. Вместо этого они возвращают совершенно новый массив или другое итоговое значение (число, строку, логическое значение).
@@ -75,13 +75,13 @@ console.log(numbers); // [1, 2, 3] — исходный массив остал�
 
   ример: 
   <p class="codeText">
-  const numbers =[1,2,3,4,5];
+const numbers =[1,2,3,4,5];
 
-  // Вызываем метод
-  numbers.reverse();
+// Вызываем метод
+numbers.reverse();
 
-  console.log(numbers); 
-  // Результат: [5, 4, 3, 2, 1] — исходный массив ИЗМЕНИЛСЯ!</p>
+console.log(numbers); 
+// Результат: [5, 4, 3, 2, 1] — исходный массив ИЗМЕНИЛСЯ!</p>
 То есть у нас был массив от 1 до 5 мы мызвали метод reverse и порядок поменялся.
 Так как сам массив изменился, не сложно догадаться что этот метот является мутирующим
 
@@ -94,10 +94,10 @@ console.log(numbers); // [1, 2, 3] — исходный массив остал�
 для начала наглядный простой пример.
 
 <p class="codeText">
-  const numbers = [1,2,3,4,5]   //создаем массив чисел
-  const newNumbers = numbers.map(number => number * 2)  //создаем новый массив на основе мутации старого
-  console.log(newNumbers) //результат нового -  [2,4,6,8,10]
-  console.log(numbers) //результат старого не изменился -  [1,2,3,4,5]
+const numbers = [1,2,3,4,5]   //создаем массив чисел
+const newNumbers = numbers.map(number => number * 2)  //создаем новый массив на основе мутации старого
+console.log(newNumbers) //результат нового -  [2,4,6,8,10]
+console.log(numbers) //результат старого не изменился -  [1,2,3,4,5]
 </p>
 
 таким образом map не изменяет существующий массив. он просто берет каждый элемент старого массива, проводит над ним какие то действия и возвращает этот элемент уже новому массиву

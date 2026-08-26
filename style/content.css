@@ -2,22 +2,61 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
+  /* без этого длинный код в flex-колонке распирает всю страницу */
+  min-width: 0;
+}
+
+.content__title {
+  font-size: clamp(22px, 5vw, 32px);
+  font-weight: 700;
+  line-height: 1.25;
+  overflow-wrap: break-word;
 }
 
 .content__accordion {
-  font-size: 20px;
+  font-size: clamp(16px, 3.5vw, 20px);
   font-weight: bold;
   cursor: pointer;
   margin-bottom: 10px;
   color: #ffffff;
   background-color: #3368b3;
   padding: 12px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+
+  /* свой маркер вместо дефолтного треугольника: тот съезжает,
+     когда заголовок переносится на вторую строку */
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
+.content__accordion::-webkit-details-marker {
+  display: none;
+}
+
+.content__accordion::before {
+  content: '▸';
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+details[open] > .content__accordion::before {
+  content: '▾';
+}
+
+.content__accordion:hover {
+  background-color: #3f79c9;
+}
+
+/* pre-line, а не pre-wrap: переносы строк, расставленные автором,
+   сохраняются, а случайные отступы из исходника схлопываются */
 .content__text {
   line-height: 1.6;
-  white-space: pre-wrap;
+  white-space: pre-line;
   color: rgb(182, 182, 182);
+  overflow-wrap: break-word;
 }
 
 .content__list {
@@ -29,13 +68,35 @@
 .subTitle {
   background-color: #3368b3;
   color: #ffffff;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin: 20px 0;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: clamp(15px, 3.5vw, 18px);
 }
 
-.codeText{
+.codeText,
+code {
   color: rgb(21, 174, 21);
   background-color: rgb(0, 44, 68);
+  font-family: 'Consolas', 'Courier New', monospace;
+}
+
+.codeText {
+  display: block;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  padding: 12px;
+  border-radius: 5px;
+  margin: 10px 0;
+  font-size: clamp(12px, 3vw, 14px);
+  line-height: 1.5;
+}
+
+code {
+  padding: 2px 6px;
+  border-radius: 4px;
+  overflow-wrap: break-word;
 }
 
 .responsive-iframe {
@@ -44,11 +105,10 @@
   border: none;
   display: block;
 }
+
 @media (min-width: 768px) {
   .responsive-iframe {
-  width: 80%;
-  aspect-ratio: 16 / 9;
-  border: none;
-  display: block;
-}
+    width: 80%;
+    aspect-ratio: 16 / 9;
+  }
 }
