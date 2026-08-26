@@ -41,6 +41,8 @@ body {
   text-decoration: none;
   color: #ffffff;
   border: none;
+  font-family: inherit;
+  cursor: pointer;
   padding: 13px;
   border-radius: 5px;
   font-size: 15px;
@@ -119,6 +121,18 @@ body {
   gap: 20px;
 }
 
+/* Страница домашних заданий: 20 карточек.
+   На мобильном наследует сетку 2 колонки от базового класса. */
+@media (min-width: 768px) {
+  .page-main__categories--homeworks {
+    /* Элементы идут сверху вниз, затем переходят вправо */
+    grid-auto-flow: column;
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 30px;
+  }
+}
+
 .categories__card {
   min-height: 130px;
   height: auto;
@@ -137,6 +151,17 @@ body {
 
 .categories__card:hover {
   background-color: #262f49;
+}
+
+.categories__card--disabled,
+.categories__card--disabled:hover {
+  background-color: #161b29;
+  color: #6c7489;
+  cursor: default;
+}
+
+.categories__card--disabled .categories__card-title {
+  color: #6c7489;
 }
 
 .categories__card-title {
