@@ -15,36 +15,25 @@
 }
 
 .header__link {
-  border: none;
-  padding: 13px;
-  border-radius: 5px;
-  font-size: 15px;
-  font-weight: bold;
-  transition: background-color 0.2s ease;
   background-color: #3368b3;
 }
 
-.header__link:hover {
-  background-color: #3368b3c3;
-}
-
 .header__logo {
-  font-size: 25px;
   font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: clamp(20px, 5vw, 25px);
 }
 
 .header__page-title {
   font-size: 25px;
   font-weight: bold;
 }
+
 .header__page-title::after {
   content: ' //';
   font-size: 30px;
   color: #3368b3;
 }
 
-.header__link,
-.header__logo {
-  text-decoration: none;
-  color: #ffffff;
-}
+

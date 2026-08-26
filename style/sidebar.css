@@ -61,6 +61,12 @@
   .sidebar__link:hover {
     color: #3368b3;
   }
+
+  .sidebar__link--disabled,
+  .sidebar__link--disabled:hover {
+    color: #6c7489;
+    cursor: default;
+  }
   .sidebar__img {
     width: 20px;
     margin-right: 10px;

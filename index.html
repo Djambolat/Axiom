@@ -8,16 +8,14 @@
     <link rel="stylesheet" href="./style/header.css" />
     <link rel="stylesheet" href="./style/sidebar.css" />
     <link rel="stylesheet" href="./style/content.css" />
-    <script src="//code.jivo.ru/widget/PX5cOYZWQK" async></script>
+    <script src="https://code.jivo.ru/widget/PX5cOYZWQK" async></script>
   </head>
   <body>
     <div class="container">
       <header class="header">
-        <a href="index.html" class="header__logo">Axiom</a>
+        <a href="./index.html" class="header__logo">Axiom</a>
         <nav class="header__nav">
-          <a href="./pages/navigation/guide.html" class="header__link"
-            >Гайд для чайников</a
-          >
+          <a href="" class="header__link button">бургер</a>
         </nav>
       </header>
 
@@ -26,23 +24,34 @@
           <div class="sidebar__container">
             <h3 class="sidebar__title">Навигация</h3>
             <p class="sidebar__nav">Главная страница</p>
-            <p></p>
             <div class="sidebar__block">
               <p class="sidebar__text adaptive-text-medium">Домашние задания</p>
               <ul class="sidebar__list">
                 <li>
-                  <a class="sidebar__link" href="homeworks/hw-9.html"
+                  <a class="sidebar__link" href="./homeworks/hw-9.html"
                     >Домашнее задание №9</a
                   >
                 </li>
-                <li><a class="sidebar__link">Домашнее задание №8</a></li>
                 <li>
-                  <a class="sidebar__link" href="homeworks/hw-7.html"
+                  <span class="sidebar__link sidebar__link--disabled"
+                    >Домашнее задание №8</span
+                  >
+                </li>
+                <li>
+                  <a class="sidebar__link" href="./homeworks/hw-7.html"
                     >Домашнее задание №7</a
                   >
                 </li>
-                <li><a class="sidebar__link">Домашнее задание №6</a></li>
-                <li><a class="sidebar__link">Домашнее задание №5</a></li>
+                <li>
+                  <span class="sidebar__link sidebar__link--disabled"
+                    >Домашнее задание №6</span
+                  >
+                </li>
+                <li>
+                  <span class="sidebar__link sidebar__link--disabled"
+                    >Домашнее задание №5</span
+                  >
+                </li>
               </ul>
             </div>
             <div class="sidebar__block">
@@ -54,7 +63,9 @@
                     href="./pages/categories/html-css.html"
                     ><img
                       class="sidebar__img"
-                      src="images/HTML5_logo.png"
+                      src="./images/HTML5_logo.png"
+                      alt=""
+                      loading="lazy"
                     />HTML</a
                   >
                 </li>
@@ -62,7 +73,9 @@
                   <a class="sidebar__link" href="./pages/categories/js.html"
                     ><img
                       class="sidebar__img"
-                      src="images/JavaScript-logo.png"
+                      src="./images/JavaScript-logo.png"
+                      alt=""
+                      loading="lazy"
                     />Java Script</a
                   >
                 </li>
@@ -72,7 +85,9 @@
                     href="./pages/categories/html-css.html"
                     ><img
                       class="sidebar__img"
-                      src="images/CSS3_logo.png"
+                      src="./images/CSS3_logo.png"
+                      alt=""
+                      loading="lazy"
                     />CSS</a
                   >
                 </li>
@@ -80,7 +95,9 @@
                   <a class="sidebar__link" href="./pages/categories/bem.html"
                     ><img
                       class="sidebar__img"
-                      src="images/bem_logo.png"
+                      src="./images/bem_logo.png"
+                      alt=""
+                      loading="lazy"
                     />БЭМ</a
                   >
                 </li>
@@ -88,7 +105,9 @@
                   <a class="sidebar__link" href="./pages/categories/git.html"
                     ><img
                       class="sidebar__img"
-                      src="images/Git_logo.png"
+                      src="./images/Git_logo.png"
+                      alt=""
+                      loading="lazy"
                     />git</a
                   >
                 </li>
@@ -96,7 +115,9 @@
                   <a class="sidebar__link" href="./pages/categories/vscode.html"
                     ><img
                       class="sidebar__img"
-                      src="images/Visual_Studio_Code.png"
+                      src="./images/Visual_Studio_Code.png"
+                      alt=""
+                      loading="lazy"
                     />VS Code</a
                   >
                 </li>
@@ -107,11 +128,17 @@
 
         <section class="page-main__content">
           <section class="page-main__hero">
-            <h1 class="adaptive-text-big">Материалы курса веб-разработки</h1>
-            <p class="adaptive-text-medium">
+            <h1 class="hero__title adaptive-text-big">
+              Материалы курса веб-разработки
+            </h1>
+            <p class="hero__text adaptive-text-medium">
               Всё, что нужно для практики веб-разработки здесь
             </p>
           </section>
+
+          <a class="hero__button button" href="./pages/navigation/guide.html"
+            >Гайд для чайников</a
+          >
 
           <section class="page-main__categories">
             <a href="./pages/categories/html-css.html" class="categories__card">
@@ -129,7 +156,10 @@
             <a href="./pages/categories/vscode.html" class="categories__card">
               <span class="categories__card-title">VS Code</span>
             </a>
-            <a href="pages/categories/homeworks.html" class="categories__card">
+            <a
+              href="./pages/categories/homeworks.html"
+              class="categories__card"
+            >
               <span class="categories__card-title">Homeworks</span>
             </a>
           </section>
@@ -142,6 +172,6 @@
       </footer>
     </div>
 
-    <script src="script/script.js"></script>
+    <script src="./script/script.js"></script>
   </body>
 </html>
