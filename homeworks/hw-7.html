@@ -136,6 +136,202 @@
             Старый способ объявления переменных. В современном коде обычно
             используют <code>let</code> и <code>const</code>.
           </p>
+
+          <p class="subTitle" id="conversion">5. Преобразование типов</p>
+          <p>
+            JavaScript может автоматически преобразовывать значения одного типа
+            в другой.
+          </p>
+          <pre class="codeText"><code>
+              Пример
+              "5" + 2; // "52"
+            </code></pre>
+          <p>
+            При использовании <code>+</code> со строкой происходит объединение
+            строк — конкатенация.
+          </p>
+          <pre><code class="codeText">
+              "5" - 2; // 3
+            </code></pre>
+          <p>
+            В этом случае JavaScript преобразует строку
+            <code>"5"</code> в число.
+          </p>
+          <h3>Явное преобразование</h3>
+          <pre><code class="codeText">Number("123");
+              // 123
+              String(123); // "123"
+              Boolean(1); // true
+            </code></pre>
+          <!-- COMPARISON -->
+          <p class="subTitle" id="comparison">6. Операторы сравнения</p>
+          <p>
+            Не путай оператор присваивания <code>=</code> с оператором сравнения
+            <code>===</code>.
+          </p>
+          <pre class="codeText"><code>const age = 20;</code></pre>
+          <p>Здесь <code>=</code> присваивает значение переменной.</p>
+          <pre class="codeText"><code>
+              age === 20; // true
+            </code></pre>
+
+          <p><code class="codeText">===</code> сравнивает значение и тип.</p>
+
+          <pre class="codeText"><code>
+              20 === "20"; // false
+            </code></pre>
+
+          <div class="homework__note">
+            <strong>💡 Совет</strong>
+            <p>
+              В современном JavaScript обычно предпочитают строгое сравнение
+              <code class="codeText">===</code>.
+            </p>
+          </div>
+          <p class="subTitle" id="strings">7. Строки и шаблонные строки</p>
+          <p>
+            Строки можно объединять с помощью оператора
+            <code class="codeText">+</code>.
+          </p>
+          <pre class="codeText"><code>
+              const name = "Тимон";
+              const age = 20;
+              console.log("Привет, меня зовут " + name +", мне " + age + " лет.");
+            </code></pre>
+          <h3>Шаблонные строки</h3>
+          <p>
+            Более удобный вариант — использовать обратные кавычки и
+            интерполяцию.
+          </p>
+          <pre class="codeText"><code>
+              const name = "Тимон";
+              const age = 20;
+              console.log(`Привет, меня зовут ${name}, мне ${age} лет.`);
+            </code></pre>
+          <!-- FUNCTIONS -->
+          <p class="subTitle" id="functions">8. Функции</p>
+          <p>
+            Функция — это блок кода, который можно вызвать, когда он
+            понадобится.
+          </p>
+          <pre class="codeText"><code>
+              function sayHello() {
+               console.log("Привет!");}
+              sayHello();
+            </code></pre>
+          <p>Сначала мы объявили функцию, затем вызвали её.</p>
+          <h3>Параметры и аргументы</h3>
+          <pre class="codeText"><code>
+              function sayHello(name) {
+              console.log(`Привет, ${name}!`);}
+              sayHello("Тимон");
+            </code></pre>
+          <ul>
+            <li><code class="codeText">name</code> — параметр;</li>
+            <li><code class="codeText">"Тимон"</code> — аргумент.</li>
+          </ul>
+          <h3>return</h3>
+          <p>
+            <code class="codeText">return</code> возвращает значение из функции.
+          </p>
+          <pre class="codeText"><code>
+              function sum(a, b) {
+              return a + b;}
+              const result = sum(5, 10);
+              console.log(result); // 15
+            </code></pre>
+          <div class="homework__note">
+            <strong>⚠️ Не путай</strong>
+            <p>
+              <code class="codeText">console.log()</code> выводит информацию в
+              консоль, а <code class="codeText">return</code> возвращает
+              значение из функции.
+            </p>
+          </div>
+          <!-- ARROW FUNCTIONS -->
+          <p class="subTitle" id="arrow-functions">9. Стрелочные функции</p>
+          <p>
+            Стрелочная функция позволяет записывать функции более компактно.
+          </p>
+          <pre class="codeText"><code>
+              const sum = (a, b) => {
+              return a + b;};
+            </code></pre>
+          <p>
+            Если функция состоит из одного выражения, её можно записать ещё
+            короче:
+          </p>
+          <pre class="codeText"><code>const sum = (a, b) => a + b;</code></pre>
+          <!-- CONDITIONS -->
+          <p class="subTitle" id="conditions">10. Условия</p>
+          <p>
+            Условные конструкции позволяют выполнять разные действия в
+            зависимости от ситуации.
+          </p>
+          <pre class="codeText"><code>const age = 20;
+              if (age >= 18) {
+              console.log("Доступ разрешён");
+              } else {
+              console.log("Доступ запрещён");}
+            </code></pre>
+          <h3>Несколько условий</h3>
+          <pre class="codeText"><code>if (age < 18) {
+              console.log("Несовершеннолетний");
+              } else if (age === 18) {
+              console.log("Только исполнилось 18");
+              } else {
+              console.log("Совершеннолетний");}
+            </code></pre>
+          <h3>Тернарный оператор</h3>
+          <p>Простое условие иногда можно записать короче:</p>
+          <pre
+            class="codeText"
+          ><code>const access = age >= 18 ? "Разрешён": "Запрещён";
+            </code></pre>
+          <!-- PRACTICE -->
+          <p id="practice">🧩 Попробуй сам</p>
+          <article class="practice">
+            <h3>Задание 1</h3>
+            <p>
+              Создай переменную <code class="codeText">userName</code>и положи в
+              неё своё имя.
+            </p>
+          </article>
+          <article class="practice">
+            <h3>Задание 2</h3>
+            <p>
+              Создай функцию <code>getAccess(age)</code>, которая возвращает:
+            </p>
+            <pre class="codeText"><code>"Доступ разрешён"</code></pre>
+            <p>если возраст 18 или больше.</p>
+            <p>Во всех остальных случаях:</p>
+
+            <pre class="codeText"><code>"Доступ запрещён"</code></pre>
+          </article>
+          <article class="practice">
+            <h3>Задание 3</h3>
+            <p>
+              Создай функцию
+              <code class="codeText">getGreeting(name, age)</code>, которая
+              возвращает:
+            </p>
+            <pre><code class="codeText">Привет, Тимон! Тебе 20 лет.</code></pre>
+          </article>
+          <!-- CHECKLIST -->
+          <h2>✅ Чеклист</h2>
+          <ul class="homework__checklist">
+            <li>Понимаю основные типы данных</li>
+            <li>Умею использовать <code>typeof</code></li>
+            <li>Понимаю разницу между <code>let</code> и <code>const</code></li>
+            <li>Понимаю преобразование типов</li>
+            <li>Отличаю <code>=</code> от <code>===</code></li>
+            <li>Умею работать со строками</li>
+            <li>Понимаю параметры и аргументы функций</li>
+            <li>Понимаю <code>return</code></li>
+            <li>Узнаю стрелочные функции</li>
+            <li>Умею использовать <code>if / else</code></li>
+            <li>Понимаю тернарный оператор</li>
+          </ul>
           <b>Проверь себя</b>
           <iframe
             class="responsive-iframe"

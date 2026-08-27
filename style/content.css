@@ -16,7 +16,7 @@
 
 .content__text {
   line-height: 1.6;
-  white-space: pre-wrap;
+  white-space: pre-line;
   color: rgb(182, 182, 182);
 }
 
@@ -25,10 +25,9 @@
 }
 
 .content__list {
-  white-space: normal;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
 .subTitle {
