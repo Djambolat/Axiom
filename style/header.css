@@ -64,6 +64,7 @@
   border-radius: 5px;
   border-left: 4px solid #a8b6d7;
   padding: 5px;
+  padding-bottom: 15px;
 }
 
 .header__burger-nav li{
