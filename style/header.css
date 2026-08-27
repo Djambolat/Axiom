@@ -2,6 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
   padding: 10px;
   background-color: #1b2235;
   border: 1px solid #292e3a;
@@ -15,36 +17,27 @@
 }
 
 .header__link {
-  border: none;
-  padding: 13px;
-  border-radius: 5px;
-  font-size: 15px;
-  font-weight: bold;
-  transition: background-color 0.2s ease;
   background-color: #3368b3;
 }
 
-.header__link:hover {
-  background-color: #3368b3c3;
-}
-
 .header__logo {
-  font-size: 25px;
   font-weight: bold;
-}
-
-.header__page-title {
-  font-size: 25px;
-  font-weight: bold;
-}
-.header__page-title::after {
-  content: ' //';
-  font-size: 30px;
-  color: #3368b3;
-}
-
-.header__link,
-.header__logo {
   text-decoration: none;
   color: #ffffff;
+  font-size: clamp(20px, 5vw, 25px);
+}
+
+/* min-width: 0 обязателен: без него длинный заголовок распирает
+   флекс-контейнер и кнопка уезжает за край экрана */
+.header__page-title {
+  font-size: clamp(17px, 4.5vw, 25px);
+  font-weight: bold;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.header__page-title::after {
+  content: ' //';
+  font-size: clamp(20px, 5vw, 30px);
+  color: #3368b3;
 }

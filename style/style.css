@@ -18,16 +18,42 @@ li {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: #0c0c17;
   color: #ffffff;
   font-size: 16px;
 }
 
+.adaptive-text-big {
+  font-size: clamp(20px, 5vw, 30px);
+  font-weight: 700;
+  z-index: 1;
+  text-align: center;
+}
+
+.adaptive-text-medium {
+  font-size: clamp(13px, 3vw, 20px);
+  z-index: 1;
+  text-align: center;
+}
+
+.button {
+  text-decoration: none;
+  color: #ffffff;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 13px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
 .container {
   margin: 0 auto;
   padding: 16px 0 24px;
-  width: min(1400px, calc(100%-24px));
+  width: min(1400px, calc(100% - 24px));
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -46,20 +72,24 @@ body {
 .page-main__content {
   flex: 1;
   min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
 }
 
 .page-main__hero {
   background: linear-gradient(120deg, #3368b3, #5847d7);
-  min-height: 200px;
   border-radius: 10px;
-  margin-bottom: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: start;
+  text-align: center;
   gap: 20px;
   position: relative;
-  padding: 36px;
+  padding: 20px;
+  min-height: 200px;
 }
 
 .page-main__hero::after {
@@ -72,45 +102,47 @@ body {
   transform: rotate(-8deg);
 }
 
-.adaptive-text-big {
-  font-size: clamp(20px, 5vw, 30px);
-  font-weight: 700;
-  z-index: 1;
+.hero__button {
+  display: block;
+  margin: 0 auto;
+  background-color: #3368b3;
+  min-width: 60%;
+  text-align: center;
 }
 
-.adaptive-text-medium {
-  font-size: clamp(13px, 3vw, 20px);
-  z-index: 1;
+.button:hover {
+  background-color: #3368b3c3;
 }
+
 
 .page-main__categories {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  gap: 20px;
 }
 
-.page-main__categories--homeworks {
-  display: grid;
-  /* Заставляем элементы идти сверху вниз, а затем переходить вправо */
-  grid-auto-flow: column;
-  /* Задаем количество строк (4 строки, которые подстроятся под контент) */
-  grid-template-rows: repeat(5, auto);
-  /* Задаем 3 колонны одинаковой ширины */
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  margin-top: 30px;
+/* Страница домашних заданий: 20 карточек.
+   На мобильном наследует сетку 2 колонки от базового класса. */
+@media (min-width: 768px) {
+  .page-main__categories--homeworks {
+    /* Элементы идут сверху вниз, затем переходят вправо */
+    grid-auto-flow: column;
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 30px;
+  }
 }
 
 .categories__card {
-  position: relative;
-  min-height: 100px;
-  padding: 25px;
+  min-height: 130px;
+  height: auto;
   border: 1px solid #292e3a;
   background-color: #1b2235;
   border-radius: 5px;
   text-decoration: none;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
   transition:
     transform 0.2s ease,
     border-color 0.2s ease,
@@ -121,10 +153,21 @@ body {
   background-color: #262f49;
 }
 
+.categories__card--disabled,
+.categories__card--disabled:hover {
+  background-color: #161b29;
+  color: #6c7489;
+  cursor: default;
+}
+
+.categories__card--disabled .categories__card-title {
+  color: #6c7489;
+}
+
 .categories__card-title {
   color: #ffffff;
   font-weight: bold;
-  font-size: clamp(15px, 5vw, 22px);
+  font-size: clamp(15px, 5vw, 20px);
   text-align: center;
 }
 
