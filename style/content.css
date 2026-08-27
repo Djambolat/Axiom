@@ -66,13 +66,14 @@ details[open] > .content__accordion::before {
 }
 
 .subTitle {
-  background-color: #3368b3;
+  background-color: #0e2545;
   color: #ffffff;
   margin: 20px 0;
   padding: 8px 12px;
-  border-radius: 5px;
+  border-radius: 2px;
   font-weight: bold;
   font-size: clamp(15px, 3.5vw, 18px);
+  border-left: 4px solid #3f79c9;
 }
 
 .codeText,

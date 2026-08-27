@@ -75,7 +75,7 @@ body {
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   gap: 40px;
 }
 
@@ -92,6 +92,9 @@ body {
   min-height: 200px;
 }
 
+.hero__button{
+  display: none;
+}
 .page-main__hero::after {
   content: '</>';
   color: #7466df;
@@ -100,14 +103,6 @@ body {
   bottom: 12px;
   font: 700 110px monospace;
   transform: rotate(-8deg);
-}
-
-.hero__button {
-  display: block;
-  margin: 0 auto;
-  background-color: #3368b3;
-  min-width: 60%;
-  text-align: center;
 }
 
 .button:hover {
@@ -131,6 +126,13 @@ body {
     grid-template-columns: repeat(4, 1fr);
     margin-top: 30px;
   }
+  .hero__button {
+  display: block;
+  margin: 0 auto;
+  background-color: #3368b3;
+  min-width: 60%;
+  text-align: center;
+}
 }
 
 .categories__card {
@@ -179,4 +181,8 @@ body {
   background-color: #1b2235;
   border: 2px solid #aaaaaa;
   border-radius: 10px;
+}
+
+.disabled{
+  display: none;
 }
