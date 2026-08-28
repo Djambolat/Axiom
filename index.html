@@ -470,42 +470,57 @@
 
     <!-- Telegram authentication -->
     <script>
-      function onTelegramAuth(user) {
-        console.log("Telegram user:", user);
+  function onTelegramAuth(user) {
+    console.log("Telegram user:", user);
 
-        fetch(
-          "https://pzsqaekyyovffvidpyjd.supabase.co/functions/v1/telegram-auth",
-          {
-            method: "POST",
-
-            headers: {
-              "Content-Type": "application/json"
-            },
-
-            body: JSON.stringify(user)
-          }
-        )
-          .then(response => response.json())
-
-          .then(data => {
-            console.log("Supabase response:", data);
-
-            if (data.success) {
-              alert(
-                `Добро пожаловать, ${data.user.first_name}!`
-              );
-            } else {
-              alert("Ошибка авторизации");
-            }
-          })
-
-          .catch(error => {
-            console.error("Auth error:", error);
-
-            alert("Ошибка соединения с сервером");
-          });
+    fetch(
+      "https://pzsqaekyyovffvidpyjd.supabase.co/functions/v1/telegram-auth",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(user)
       }
-    </script>
+    )
+      .then(async (response) => {
+        const text = await response.text();
+
+        console.log("HTTP status:", response.status);
+        console.log("Server response:", text);
+
+        let data;
+
+        try {
+          data = JSON.parse(text);
+        } catch {
+          throw new Error("Сервер вернул не JSON");
+        }
+
+        if (!response.ok) {
+          throw new Error(data.error || "Ошибка сервера");
+        }
+
+        return data;
+      })
+      .then((data) => {
+        console.log("Auth success:", data);
+
+        if (data.success) {
+          alert(
+            `Добро пожаловать, ${data.user.first_name}!`
+          );
+        }
+      })
+      .catch((error) => {
+        console.error("AUTH ERROR:", error);
+
+        alert(
+          "Ошибка авторизации: " + error.message
+        );
+      });
+  }
+</script>
 
 
     <!-- Main JavaScript -->
