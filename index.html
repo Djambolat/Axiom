@@ -10,11 +10,49 @@
     <link rel="stylesheet" href="./style/content.css" />
     <script src="https://code.jivo.ru/widget/PX5cOYZWQK" async></script>
   </head>
+  <script>
+  function onTelegramAuth(user) {
+    console.log("Telegram user:", user);
+
+    fetch("https://pzsqaekyyovffvidpyjd.supabase.co/functions/v1/telegram-auth", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(user)
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log("Supabase response:", data);
+
+      if (data.success) {
+        alert(`Добро пожаловать, ${data.user.first_name}!`);
+      } else {
+        alert("Ошибка авторизации");
+      }
+    })
+    .catch(error => {
+      console.error(error);
+      alert("Ошибка соединения с сервером");
+    });
+  }
+</script>
+
+<script
+  async
+  src="https://telegram.org/js/telegram-widget.js?22"
+  data-telegram-login="authorizer1_bot"
+  data-size="large"
+  data-userpic="true"
+  data-request-access="write"
+  data-onauth="onTelegramAuth(user)">
+</script>
   <body>
     <div class="container">
       <header class="header">
         <a href="./index.html" class="header__logo">Axiom</a>
         <nav class="header__nav">
+          <div id="telegram-login"></div>
           <a class="hero__button button" href="./pages/navigation/guide.html"
             >Гайд для чайников</a
           >
