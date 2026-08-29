@@ -116,25 +116,6 @@ body {
   gap: 20px;
 }
 
-/* Страница домашних заданий: 20 карточек.
-   На мобильном наследует сетку 2 колонки от базового класса. */
-@media (min-width: 768px) {
-  .page-main__categories--homeworks {
-    /* Элементы идут сверху вниз, затем переходят вправо */
-    grid-auto-flow: column;
-    grid-template-rows: repeat(5, auto);
-    grid-template-columns: repeat(4, 1fr);
-    margin-top: 30px;
-  }
-  .hero__button {
-  display: block;
-  margin: 0 auto;
-  background-color: #3368b3;
-  min-width: 60%;
-  text-align: center;
-}
-}
-
 .categories__card {
   min-height: 130px;
   height: auto;
@@ -198,4 +179,22 @@ body {
 
 .disabled{
   display: none;
+}
+/* Страница домашних заданий: 20 карточек.
+   На мобильном наследует сетку 2 колонки от базового класса. */
+@media (min-width: 768px) {
+  .page-main__categories--homeworks {
+    /* Элементы идут сверху вниз, затем переходят вправо */
+    grid-auto-flow: column;
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 30px;
+  }
+  .hero__button {
+  display: block;
+  margin: 0 auto;
+  background-color: #3368b3;
+  min-width: 60%;
+  text-align: center;
+}
 }
