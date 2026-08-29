@@ -116,25 +116,6 @@ body {
   gap: 20px;
 }
 
-/* Страница домашних заданий: 20 карточек.
-   На мобильном наследует сетку 2 колонки от базового класса. */
-@media (min-width: 768px) {
-  .page-main__categories--homeworks {
-    /* Элементы идут сверху вниз, затем переходят вправо */
-    grid-auto-flow: column;
-    grid-template-rows: repeat(5, auto);
-    grid-template-columns: repeat(4, 1fr);
-    margin-top: 30px;
-  }
-  .hero__button {
-  display: block;
-  margin: 0 auto;
-  background-color: #3368b3;
-  min-width: 60%;
-  text-align: center;
-}
-}
-
 .categories__card {
   min-height: 130px;
   height: auto;
@@ -177,12 +158,49 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
+  padding-right: 40px;
   background-color: #1b2235;
-  border: 2px solid #aaaaaa;
+  border: 1px solid #292e3a;
   border-radius: 10px;
+}
+
+.footer__nav{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 30px;
+}
+
+.footer__text-nav{
+  display: none;
+}
+
+.footer__image{
+  width: 40px;
 }
 
 .disabled{
   display: none;
+}
+/* Страница домашних заданий: 20 карточек.
+   На мобильном наследует сетку 2 колонки от базового класса. */
+@media (min-width: 768px) {
+  .page-main__categories--homeworks {
+    /* Элементы идут сверху вниз, затем переходят вправо */
+    grid-auto-flow: column;
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 30px;
+  }
+  .hero__button {
+  display: block;
+  margin: 0 auto;
+  background-color: #3368b3;
+  min-width: 60%;
+  text-align: center;
+}
+  .footer__text-nav{
+    display: contents;
+  }
 }
