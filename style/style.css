@@ -172,6 +172,9 @@ body {
   gap: 30px;
 }
 
+.footer__text-nav{
+  display: none;
+}
 
 .footer__image{
   width: 40px;
@@ -197,4 +200,7 @@ body {
   min-width: 60%;
   text-align: center;
 }
+  .footer__text-nav{
+    display: contents;
+  }
 }
