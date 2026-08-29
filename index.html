@@ -23,19 +23,6 @@
 
         <nav class="header__nav">
 
-          <!-- Telegram Login -->
-          <div id="telegram-login"></div>
-
-          <script
-            async
-            src="https://telegram.org/js/telegram-widget.js?22"
-            data-telegram-login="authorizer1_bot"
-            data-size="large"
-            data-userpic="true"
-            data-request-access="write"
-            data-onauth="onTelegramAuth(user)">
-          </script>
-
           <a
             class="hero__button button"
             href="./pages/navigation/guide.html"
@@ -466,58 +453,6 @@
       </footer>
 
     </div>
-
-
-    <!-- Telegram authentication -->
-<script>
-  function onTelegramAuth(user) {
-    console.log("Telegram user:", user);
-
-    fetch(
-      "https://pzsqaekyyovffvidpyjd.supabase.co/functions/v1/telegram-auth",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(user)
-      }
-    )
-      .then(response => response.json())
-
-      .then(data => {
-        console.log("FULL SUPABASE RESPONSE:", data);
-
-       if (data.success) {
-  const user = saveUser({
-    id: data.user.telegram_id,
-    username: data.user.username,
-    first_name: data.user.first_name,
-    last_name: data.user.last_name,
-    photo_url: data.user.photo_url
-  });
-
-  showUser(user);
-} else {
-          alert(
-            "Ошибка авторизации\n\n" +
-            JSON.stringify(data, null, 2)
-          );
-        }
-      })
-
-      .catch(error => {
-        console.error("AUTH ERROR:", error);
-
-        alert(
-          "Ошибка соединения с сервером\n\n" +
-          error.message
-        );
-      });
-  }
-</script>
-
-
     <!-- Main JavaScript -->
     <script src="./script/script.js"></script>
 
