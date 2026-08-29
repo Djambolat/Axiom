@@ -177,10 +177,23 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
+  padding-right: 40px;
   background-color: #1b2235;
-  border: 2px solid #aaaaaa;
+  border: 1px solid #292e3a;
   border-radius: 10px;
+}
+
+.footer__nav{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 30px;
+}
+
+
+.footer__image{
+  width: 40px;
 }
 
 .disabled{
