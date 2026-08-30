@@ -44,46 +44,109 @@
   content: ' //';
   font-size: clamp(20px, 5vw, 30px);
   color: #3368b3;
-
 }
-.header__burger{
+/* Кнопка-бургер: видна только на мобилках */
+.header__burger {
   display: block;
+  padding: 4px 12px;
   font-size: 22px;
-  cursor: pointer;
-}
-
-.header__burger-nav{
-  position: absolute;
-  top: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  right:0;
-  z-index: 100;
-  width: 250px;
+  color: #ffffff;
   background-color: #20293f;
-  border-radius: 5px;
-  border-left: 4px solid #a8b6d7;
-  padding: 5px;
-  padding-bottom: 15px;
-}
-
-.header__burger-nav li{
-  list-style: none;
+  border: 1px solid #292e3a;
+  border-radius: 10px;
   cursor: pointer;
-  margin: 5px;
-  font-size: 18px;
 }
 
-.header__burger-nav a{
+/* Меню на весь экран с размытым фоном под ним */
+.header__menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(12, 12, 23, 0.6);
+  backdrop-filter: blur(10px);
+
+  /* пока меню закрыто: прозрачное и не ловит клики.
+     visibility тоже в transition, иначе меню исчезнет мгновенно */
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.header__menu--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.header__menu-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  /* фиксированный размер: символа ✕ нет в Montserrat, он берётся из
+     запасного шрифта — без размеров кнопка съезжает, пока шрифт грузится */
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #3368b3;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.header__burger-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.header__burger-list a {
+  color: #ffffff;
   text-decoration: none;
-  color: white;
+  font-size: 22px;
+  font-weight: bold;
 }
 
-@media(min-width: 768px){
-  .header{
+/* "Гайд для чайников" выделяем так же, как кнопку на пк */
+.header__menu-guide {
+  background-color: #3368b3;
+}
+
+/* Пока меню открыто, страница под ним не скроллится.
+   scrollbar-gutter оставляет место под полосу прокрутки:
+   без него страница станет шире и дёрнется вбок */
+html.is-menu-open {
+  overflow: hidden;
+  scrollbar-gutter: stable;
+}
+
+/* На мобилках вместо кнопки "на главную" показываем бургер */
+.header__link {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header {
     position: static;
   }
-  .header__burger{
+  .header__link {
+    display: block;
+  }
+  .header__burger,
+  .header__menu {
     display: none;
   }
 }
