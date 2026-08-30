@@ -14,9 +14,11 @@
       <header class="header">
         <span class="header__page-title">Git и GitHub</span>
         <nav class="header__nav">
-          <a href="../../index.html" class="header__link button">на главную</a>
+          <button class="header__burger" type="button" aria-label="Меню">☰</button>
         </nav>
       </header>
+
+      <a href="../../index.html" class="header__link button">на главную</a>
       <div class="page-main">
         <section class="sidebar">
           <div class="sidebar__container">
@@ -355,5 +357,65 @@
         </section>
       </div>
     </div>
+
+    <!-- Мобильное меню: лежит в конце body, чтобы над ним не было
+         sticky-шапки — иначе fixed считается от неё, а не от экрана -->
+    <div class="header__menu">
+
+      <button class="header__menu-close" type="button" aria-label="Закрыть меню">
+        ✕
+      </button>
+
+      <nav class="header__burger-nav">
+        <ul class="header__burger-list">
+          <li>
+            <a href="../../index.html">Главная</a>
+          </li>
+
+          <li>
+            <a
+              class="button header__menu-guide"
+              href="../../pages/navigation/guide.html"
+            >
+              Гайд для чайников
+            </a>
+          </li>
+
+          <li>
+            <a href="../../pages/categories/homeworks.html">
+              Домашние задания
+            </a>
+          </li>
+
+          <li>
+            <a href="../../pages/categories/bem.html">
+              Методология БЭМ
+            </a>
+          </li>
+
+          <li>
+            <a href="../../pages/categories/git.html">
+              Git
+            </a>
+          </li>
+
+          <li>
+            <a href="../../pages/categories/js.html">
+              JavaScript
+            </a>
+          </li>
+
+          <li>
+            <a href="https://t.me/Talyba_dev">
+              О нашей команде
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <!-- Main JavaScript -->
+    <script src="../../script/script.js"></script>
   </body>
 </html>

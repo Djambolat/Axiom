@@ -31,8 +31,6 @@
   font-size: clamp(20px, 5vw, 25px);
 }
 
-/* min-width: 0 обязателен: без него длинный заголовок распирает
-   флекс-контейнер и кнопка уезжает за край экрана */
 .header__page-title {
   font-size: clamp(17px, 4.5vw, 25px);
   font-weight: bold;
@@ -44,46 +42,122 @@
   content: ' //';
   font-size: clamp(20px, 5vw, 30px);
   color: #3368b3;
-
 }
-.header__burger{
+/* Кнопка-бургер: видна только на мобилках */
+.header__burger {
   display: block;
+  padding: 4px 12px;
   font-size: 22px;
-  cursor: pointer;
-}
-
-.header__burger-nav{
-  position: absolute;
-  top: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  right:0;
-  z-index: 100;
-  width: 250px;
+  color: #ffffff;
   background-color: #20293f;
-  border-radius: 5px;
-  border-left: 4px solid #a8b6d7;
-  padding: 5px;
-  padding-bottom: 15px;
-}
-
-.header__burger-nav li{
-  list-style: none;
+  border: 1px solid #292e3a;
+  border-radius: 10px;
   cursor: pointer;
-  margin: 5px;
-  font-size: 18px;
 }
 
-.header__burger-nav a{
+/* Меню на весь экран с размытым фоном под ним */
+.header__menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(12, 12, 23, 0.6);
+  backdrop-filter: blur(10px);
+
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.header__menu--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.header__menu-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #3368b3;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.header__burger-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.header__burger-list a,
+.header__burger-list .header__burger-disabled {
+  color: #ffffff;
   text-decoration: none;
-  color: white;
+  font-size: 22px;
+  font-weight: bold;
 }
 
-@media(min-width: 768px){
-  .header{
+/* "Гайд для чайников" выделяем так же, как кнопку на пк */
+.header__menu-guide {
+  background-color: #3368b3;
+}
+
+/* Пока меню открыто, страница под ним не скроллится.
+   scrollbar-gutter оставляет место под полосу прокрутки:
+   без него страница станет шире и дёрнется вбок */
+html.is-menu-open {
+  overflow: hidden;
+  scrollbar-gutter: stable;
+}
+
+/* Кнопка возврата стоит отдельной строкой под шапкой — внутри неё
+   на мобилке тесно. .container это флекс-колонка, поэтому align-self,
+   иначе кнопка растянулась бы во всю ширину.
+
+   Контурная, а не залитая: это навигация, а не действие внутри страницы,
+   и рядом с синими кнопками контента она не должна с ними спорить */
+.header__link {
+  align-self: flex-start;
+  padding: 9px 14px;
+  font-size: 13px;
+  background-color: transparent;
+  border: 1px solid #3368b3;
+  color: #a8b6d7;
+}
+
+.header__link:hover {
+  background-color: #212a42;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .header {
     position: static;
   }
-  .header__burger{
+  .header__link {
+    padding: 12px 18px;
+    font-size: 15px;
+  }
+  .header__burger,
+  .header__menu {
     display: none;
   }
 }

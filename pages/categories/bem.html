@@ -1,11 +1,215 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BEM</title>
-</head>
-<body>
-  
-</body>
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEM — методология вёрстки</title>
+    <link rel="stylesheet" href="../../style/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <span class="header__page-title">BEM</span>
+        <nav class="header__nav">
+          <a href="../../index.html" class="header__link">на главную</a>
+        </nav>
+      </header>
+
+      <section class="content">
+        <details class="content__accordion-block">
+          <summary class="content__accordion">Пояснение с самого нуля</summary>
+          <div class="content__accordion-body">
+            <p class="content__main">
+              Главная засада БЭМ в том, что новички пытаются усложнить. Давай
+              разберём на пальцах, без скучной теории. Представь, что мы
+              собираем машину из Лего.<br /><br />
+              <strong>Блок (Block)</strong> — это независимая деталь. Сама
+              машина. В коде это твой главный контейнер. Назовём его
+              <code>car</code>.<br /><br />
+              <strong>Элемент (Element)</strong> — это часть машины. Руль,
+              колесо, дверь. Руль сам по себе на дороге не валяется, он нужен
+              только внутри машины. Отделяется от блока двумя подчёркиваниями
+              <code>__</code>. Примеры: <code>car__wheel</code>,
+              <code>car__door</code>.<br /><br />
+              <strong>Модификатор (Modifier)</strong> — это внешний вид или
+              состояние. Цвет машины или открыта ли дверь. Отделяется двумя тире
+              <code>--</code> (в современной вёрстке так удобнее). Примеры:
+              <code>car--red</code>, <code>car__door--open</code>.
+            </p>
+          </div>
+        </details>
+
+        <h1 class="content__title">BEM — методология вёрстки</h1>
+        <p class="content__text">BEM (Block, Element, Modifier) — это методология именования CSS-классов, которая помогает держать стили предсказуемыми и не бояться, что классы одного компонента случайно «пересекутся» с другим. Вместо общих названий вроде <code>title</code> или <code>btn</code> каждый класс явно привязан к своему блоку.</p>
+
+        <div class="content__text">
+          <h3>Пример: карточка товара</h3>
+          <p>Допустим, ты вёрстаешь карточку кроссовок.</p>
+
+          <p><strong>Как НЕ надо делать:</strong></p>
+          <pre class="content__code"><code>&lt;div class="card"&gt;
+  &lt;img class="image" src="..."&gt;
+  &lt;div class="title"&gt;Nike Air&lt;/div&gt;
+  &lt;button class="btn red"&gt;Купить&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+          <p>
+            В чём косяк: классы <code>image</code>, <code>title</code> и
+            <code>btn</code> слишком общие. Завтра ты добавишь блок новостей с
+            классом <code>title</code>, стили пересекутся, и всё поедет.
+          </p>
+
+          <p><strong>Как НАДО по БЭМ:</strong></p>
+          <pre class="content__code"><code>&lt;div class="card"&gt;
+  &lt;img class="card__image" src="..."&gt;
+  &lt;div class="card__title"&gt;Nike Air&lt;/div&gt;
+  &lt;button class="card__btn card__btn--red"&gt;Купить&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+          <p>Что мы тут натворили:</p>
+          <ul>
+            <li>
+              <code>card</code> — это наш Блок. Он независимый, можно
+              скопировать и вставить на другую страницу.
+            </li>
+            <li>
+              <code>card__image</code>, <code>card__title</code>,
+              <code>card__btn</code> — это Элементы. Они жёстко привязаны к
+              карточке.
+            </li>
+            <li>
+              <code>card__btn--red</code> — это Модификатор. Мы взяли базовую
+              кнопку и сказали «сделай её красной». Заметь: мы пишем два класса
+              рядом — сначала базовый <code>card__btn</code>, потом модификатор
+              <code>card__btn--red</code>.
+            </li>
+          </ul>
+        </div>
+
+        <div class="content__text">
+          <h3>Пример 2: модификатор как состояние (не только цвет)</h3>
+          <p>
+            Модификаторы не обязательно про внешний вид — часто это состояние
+            блока или элемента.
+          </p>
+          <pre
+            class="content__code"
+          ><code>&lt;div class="menu-item menu-item--active"&gt;Главная&lt;/div&gt;
+&lt;div class="menu-item"&gt;Материалы&lt;/div&gt;
+
+&lt;input class="field field--error" type="text"&gt;
+&lt;input class="field" type="text"&gt;</code></pre>
+          <p>Соответствующий CSS:</p>
+          <pre class="content__code"><code>.menu-item {
+  color: #6B6B68;
+}
+
+.menu-item--active {
+  color: #378ADD;
+  font-weight: 600;
+}
+
+.field {
+  border: 1px solid #E0DFD9;
+}
+
+.field--error {
+  border-color: #D85A30;
+}</code></pre>
+          <p>
+            Модификатор всегда добавляется <strong>вторым классом</strong>, а не
+            заменяет базовый — иначе придётся дублировать все общие стили внутри
+            самого модификатора.
+          </p>
+        </div>
+
+        <div class="content__text">
+          <h3>Пример 3: элемент внутри элемента — частая ошибка</h3>
+          <p>Самая частая ошибка новичков — плодить «матрёшки» из элементов:</p>
+          <pre class="content__code"><code>&lt;!-- Так делать НЕЛЬЗЯ --&gt;
+&lt;div class="card"&gt;
+  &lt;div class="card__body"&gt;
+&lt;div class="card__body__text"&gt;
+      &lt;h3 class="card__body__text__title"&gt;Nike Air&lt;/h3&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <p>
+            БЭМ всегда <strong>плоский</strong>. Элемент привязан только к
+            главному блоку, даже если лежит на пять уровней вложенности внутри
+            дивов:
+          </p>
+          <pre class="content__code"><code>&lt;!-- Так правильно --&gt;
+&lt;div class="card"&gt;
+  &lt;div class="card__body"&gt;
+&lt;div class="card__text"&gt;
+      &lt;h3 class="card__title"&gt;Nike Air&lt;/h3&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <div class="content__text">
+          <h3>Пример 4: когда блок можно вложить в другой блок (микс)</h3>
+          <p>
+            Иногда один блок используется внутри другого — например,
+            универсальная кнопка сайта используется внутри карточки. Это
+            нормально, и здесь классы блока и элемента ставятся
+            <strong>рядом на одном теге</strong> — это называется миксом:
+          </p>
+          <pre class="content__code"><code>&lt;div class="card"&gt;
+  &lt;div class="card__title"&gt;Nike Air&lt;/div&gt;
+  &lt;button class="btn btn--primary card__btn"&gt;Купить&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+          <p>
+            <code>btn</code> и <code>btn--primary</code> — это независимый
+            переиспользуемый блок кнопки (со своими стилями).
+            <code>card__btn</code> добавлен рядом только для точечных отступов
+            конкретно внутри карточки — например, <code>margin-top</code>,
+            который нужен только здесь.
+          </p>
+        </div>
+
+        <div class="content__text">
+          <h3>Два главных правила, чтобы не тупить на практике</h3>
+          <ul>
+            <li>
+              Задавай себе вопрос: «Эта штука может жить отдельно на сайте?»
+              Если ДА (например, стандартная кнопка сайта или логотип) — делай
+              её отдельным Блоком (просто <code>btn</code>). Если НЕТ (например,
+              заголовок конкретно этой карточки) — делай Элементом
+              (<code>card__title</code>).
+            </li>
+            <li>
+              БЭМ всегда плоский! Не плоди матрёшки из элементов (типа
+              <code>card__body__text__title</code>). Элемент всегда привязан
+              только к главному Блоку.
+            </li>
+          </ul>
+        </div>
+
+        <div class="content__text">
+          <h3>Как это выглядит в файлах проекта</h3>
+          <p>
+            На практике БЭМ также подсказывает, как раскладывать CSS по файлам —
+            один блок обычно живёт в одном файле:
+          </p>
+          <pre class="content__code"><code>style/
+└── components/
+├── header.css      → .header, .header__logo, .header__nav
+├── card.css        → .card, .card__title, .card__btn
+└── footer.css      → .footer, .footer__text</code></pre>
+        </div>
+
+        <div class="content__text">
+          <h3>Мини-тренировка</h3>
+          <p>
+            Возьми любой свой старый кусок вёрстки и переименуй классы по этой
+            логике: найди главный контейнер (Блок) и привяжи к нему все
+            внутренности (Элементы). Если где-то стоит внешний вид или состояние
+            — вынеси его в Модификатор вторым классом.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>
