@@ -31,8 +31,6 @@
   font-size: clamp(20px, 5vw, 25px);
 }
 
-/* min-width: 0 обязателен: без него длинный заголовок распирает
-   флекс-контейнер и кнопка уезжает за край экрана */
 .header__page-title {
   font-size: clamp(17px, 4.5vw, 25px);
   font-weight: bold;
@@ -71,8 +69,6 @@
   background-color: rgba(12, 12, 23, 0.6);
   backdrop-filter: blur(10px);
 
-  /* пока меню закрыто: прозрачное и не ловит клики.
-     visibility тоже в transition, иначе меню исчезнет мгновенно */
   opacity: 0;
   visibility: hidden;
   transition:
@@ -90,8 +86,6 @@
   top: 15px;
   right: 15px;
 
-  /* фиксированный размер: символа ✕ нет в Montserrat, он берётся из
-     запасного шрифта — без размеров кнопка съезжает, пока шрифт грузится */
   width: 44px;
   height: 44px;
   display: flex;
@@ -119,11 +113,6 @@
   text-decoration: none;
   font-size: 22px;
   font-weight: bold;
-}
-
-/* Тема ещё не заполнена: пункт виден, но не кликается */
-.header__burger-list .header__burger-disabled {
-  color: #6c7489;
 }
 
 /* "Гайд для чайников" выделяем так же, как кнопку на пк */

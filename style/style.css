@@ -75,7 +75,6 @@ body {
 
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   gap: 40px;
 }
 
@@ -159,26 +158,26 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  padding-right: 40px;
   background-color: #1b2235;
   border: 1px solid #292e3a;
   border-radius: 10px;
 }
 
-.footer__nav {
+.footer__nav{
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  gap: 15px;
+  gap: 30px;
 }
 
 .footer__text-nav{
   display: none;
 }
 
-/* На мобилке иконка мелкая, на пк подрастает до прежних 40px */
-.footer__image {
-  width: 26px;
-  height: 26px;
+.footer__image{
+  width: 40px;
+  height: 40px;
 }
 
 .disabled{
@@ -187,16 +186,6 @@ body {
 /* Страница домашних заданий: 20 карточек.
    На мобильном наследует сетку 2 колонки от базового класса. */
 @media (min-width: 768px) {
-  .footer {
-    padding-right: 40px;
-  }
-  .footer__nav {
-    gap: 30px;
-  }
-  .footer__image {
-    width: 40px;
-    height: 40px;
-  }
   .page-main__categories--homeworks {
     /* Элементы идут сверху вниз, затем переходят вправо */
     grid-auto-flow: column;
