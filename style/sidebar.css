@@ -132,6 +132,12 @@
     cursor: default;
   }
 
+  /* у погашенной темы иконка тоже приглушается, иначе она
+     остаётся яркой и тема выглядит доступной */
+  .sidebar__link--disabled .sidebar__img {
+    opacity: 0.4;
+  }
+
   .sidebar__img {
     width: 20px;
     height: 20px;

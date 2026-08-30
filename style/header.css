@@ -113,11 +113,17 @@
   gap: 25px;
 }
 
-.header__burger-list a {
+.header__burger-list a,
+.header__burger-list .header__burger-disabled {
   color: #ffffff;
   text-decoration: none;
   font-size: 22px;
   font-weight: bold;
+}
+
+/* Тема ещё не заполнена: пункт виден, но не кликается */
+.header__burger-list .header__burger-disabled {
+  color: #6c7489;
 }
 
 /* "Гайд для чайников" выделяем так же, как кнопку на пк */
@@ -133,9 +139,24 @@ html.is-menu-open {
   scrollbar-gutter: stable;
 }
 
-/* На мобилках вместо кнопки "на главную" показываем бургер */
+/* Кнопка возврата стоит отдельной строкой под шапкой — внутри неё
+   на мобилке тесно. .container это флекс-колонка, поэтому align-self,
+   иначе кнопка растянулась бы во всю ширину.
+
+   Контурная, а не залитая: это навигация, а не действие внутри страницы,
+   и рядом с синими кнопками контента она не должна с ними спорить */
 .header__link {
-  display: none;
+  align-self: flex-start;
+  padding: 9px 14px;
+  font-size: 13px;
+  background-color: transparent;
+  border: 1px solid #3368b3;
+  color: #a8b6d7;
+}
+
+.header__link:hover {
+  background-color: #212a42;
+  color: #ffffff;
 }
 
 @media (min-width: 768px) {
@@ -143,7 +164,8 @@ html.is-menu-open {
     position: static;
   }
   .header__link {
-    display: block;
+    padding: 12px 18px;
+    font-size: 15px;
   }
   .header__burger,
   .header__menu {

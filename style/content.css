@@ -107,6 +107,104 @@ code {
   display: block;
 }
 
+/* Блок с готовой разметкой: заголовки, абзацы, списки, код.
+   В отличие от .content__text здесь обычные переносы строк,
+   поэтому текст можно писать как удобно */
+.content__block,
+.content__accordion-body {
+  line-height: 1.6;
+  color: rgb(182, 182, 182);
+  overflow-wrap: break-word;
+}
+
+.content__block p,
+.content__accordion-body p {
+  margin: 10px 0;
+}
+
+.content__block ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 20px;
+}
+
+.content__block strong,
+.content__accordion-body strong {
+  color: #ffffff;
+}
+
+/* Многострочный код: <pre> сохраняет отступы, <code> внутри —
+   только подсветка, поэтому свой фон и padding у него убираем */
+.content__code {
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 5px;
+  background-color: rgb(0, 44, 68);
+  /* длинные строки кода скроллятся внутри блока, а не растягивают страницу */
+  overflow-x: auto;
+}
+
+.content__code code {
+  padding: 0;
+  background-color: transparent;
+  font-size: clamp(12px, 3vw, 14px);
+  line-height: 1.5;
+}
+
+/* Карточка со ссылкой на скачивание файла */
+.download {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background-color: #1b2235;
+  border: 1px solid #292e3a;
+  border-left: 4px solid #3368b3;
+  border-radius: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.download:hover {
+  background-color: #262f49;
+}
+
+.download__icon {
+  /* flex-shrink, иначе на узком экране квадрат с надписью PDF сплющивается */
+  flex-shrink: 0;
+  padding: 10px 12px;
+  border-radius: 5px;
+  background-color: #3368b3;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.download__body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.download__title {
+  font-size: clamp(15px, 3.5vw, 18px);
+  font-weight: bold;
+}
+
+.download__hint {
+  color: rgb(182, 182, 182);
+  font-size: clamp(12px, 3vw, 14px);
+}
+
+.download__arrow {
+  margin-left: auto;
+  font-size: 22px;
+  color: #a8b6d7;
+}
+
+
 @media (min-width: 768px) {
   .responsive-iframe {
     width: 80%;
