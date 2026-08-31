@@ -17,6 +17,10 @@ li {
   padding: 0;
 }
 
+ul, li {
+  list-style-type: none;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #0c0c17;

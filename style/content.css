@@ -13,11 +13,17 @@
   overflow-wrap: break-word;
 }
 
+.content__block {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
 .content__accordion {
   font-size: clamp(16px, 3.5vw, 20px);
   font-weight: bold;
   cursor: pointer;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   color: #ffffff;
   background-color: #3368b3;
   padding: 12px;
@@ -48,10 +54,8 @@ details[open] > .content__accordion::before {
   background-color: #3f79c9;
 }
 
-/* pre-line, а не pre-wrap: переносы строк, расставленные автором,
-   сохраняются, а случайные отступы из исходника схлопываются */
 .content__text {
-  line-height: 1.6;
+  line-height: 1.8;
   white-space: pre-line;
   color: rgb(182, 182, 182);
   overflow-wrap: break-word;
@@ -60,13 +64,12 @@ details[open] > .content__accordion::before {
 .content__list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
 }
 
 .subTitle {
   background-color: #0e2545;
   color: #ffffff;
-  margin: 20px 0;
   padding: 8px 12px;
   border-radius: 2px;
   font-weight: bold;
@@ -105,9 +108,52 @@ code {
   display: block;
 }
 
+.content--article .content__text {
+  white-space: normal;
+}
+
+.content__text-title {
+  color: #ffffff;
+  font-size: clamp(17px, 4vw, 21px);
+  line-height: 1.3;
+}
+
+.content__text-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 22px;
+}
+
+.content--article .content__text li {
+  list-style: disc;
+}
+
+/* Онлайн-компилятор. У редактора кода свои пропорции: соотношение сторон
+   ему не подходит, нужна фиксированная высота, иначе на узком экране
+   он вытягивается в бесполезную «колонку». */
+.responsive-iframe--compiler {
+  aspect-ratio: auto;
+  height: 420px;
+  border-radius: 5px;
+}
+
+/* Запасной вариант: если эмбед вырежет блокировщик рекламы,
+   человек всё равно сможет открыть компилятор */
+.iframe-fallback {
+  margin-top: 8px;
+  font-size: 14px;
+  color: rgb(182, 182, 182);
+}
+
+.iframe-fallback a {
+  color: #5b9bea;
+}
+
 @media (min-width: 768px) {
-  .responsive-iframe {
-    width: 80%;
-    aspect-ratio: 16 / 9;
+  .responsive-iframe--compiler {
+    width: 100%;
+    aspect-ratio: auto;
+    height: 520px;
   }
 }
