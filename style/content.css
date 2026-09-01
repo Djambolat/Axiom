@@ -1,4 +1,4 @@
-.content {
+.content__container {
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -11,12 +11,6 @@
   font-weight: 700;
   line-height: 1.25;
   overflow-wrap: break-word;
-}
-
-.content__block {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
 }
 
 .content__accordion {
@@ -34,10 +28,6 @@
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-.content__accordion::-webkit-details-marker {
-  display: none;
 }
 
 .content__accordion::before {
@@ -67,7 +57,14 @@ details[open] > .content__accordion::before {
   gap: 25px;
 }
 
-.subTitle {
+.content__text-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-left: 30px;
+}
+
+.content__subtitle {
   background-color: #0e2545;
   color: #ffffff;
   padding: 8px 12px;
@@ -77,6 +74,16 @@ details[open] > .content__accordion::before {
   border-left: 4px solid #3f79c9;
 }
 
+.codeText {
+  display: block;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: clamp(12px, 3vw, 14px);
+  line-height: 1.5;
+}
+
 .codeText,
 code {
   color: rgb(21, 174, 21);
@@ -84,28 +91,10 @@ code {
   font-family: 'Consolas', 'Courier New', monospace;
 }
 
-.codeText {
-  display: block;
-  white-space: pre-wrap;
-  overflow-wrap: break-word;
-  padding: 12px;
-  border-radius: 5px;
-  margin: 10px 0;
-  font-size: clamp(12px, 3vw, 14px);
-  line-height: 1.5;
-}
-
 code {
   padding: 2px 6px;
   border-radius: 4px;
   overflow-wrap: break-word;
-}
-
-.responsive-iframe {
-  width: 100%;
-  aspect-ratio: 2 / 3;
-  border: none;
-  display: block;
 }
 
 .content--article .content__text {
@@ -118,11 +107,9 @@ code {
   line-height: 1.3;
 }
 
-.content__text-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding-left: 22px;
+.content__text-link {
+  color: #5b9bea;
+  text-decoration: underline;
 }
 
 .content--article .content__text li {
@@ -165,21 +152,9 @@ code {
   }
 }
 
-/* Вертикальный ритм внутри статьи: глобальный сброс убирает margin у p,
-   поэтому соседние абзацы иначе слипаются */
-.content--article .content__text > * + * {
-  margin-top: 12px;
-}
-
-/* Нумерованный список (оглавление домашки): глобальное
-   ul, li { list-style-type: none } снимает маркеры и с ol, возвращаем цифры */
-.content--article .content__text ol li {
-  list-style: decimal;
-}
-
 /* Врезка «💡 Зачем нужны комментарии?» — та же карточка, что у categories__card,
-   с синей полосой слева, как у subTitle */
-.homework__note {
+   с синей полосой слева, как у content__subtitle */
+.content__note {
   background-color: #1b2235;
   border: 1px solid #292e3a;
   border-left: 4px solid #3f79c9;
@@ -187,7 +162,7 @@ code {
   padding: 12px 16px;
 }
 
-.homework__note strong {
+.content__note strong {
   color: #ffffff;
 }
 
@@ -197,34 +172,4 @@ code {
   border: 1px solid #292e3a;
   border-radius: 5px;
   padding: 12px 16px;
-}
-
-/* Чеклист в конце домашки: галочка вместо маркера */
-.content--article .content__text .homework__checklist li {
-  /* свой маркер-галочка вместо точки: перебиваем disc у списков статьи */
-  list-style: none;
-}
-
-.homework__checklist {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.homework__checklist li::before {
-  content: '✓';
-  color: #4caf50;
-  font-weight: bold;
-  margin-right: 8px;
-}
-
-/* Ссылки внутри статьи (оглавление домашки) — в цвет остального сайта,
-   вместо синего браузерного по умолчанию */
-.content--article .content__text a {
-  color: #5b9bea;
-  text-decoration: none;
-}
-
-.content--article .content__text a:hover {
-  text-decoration: underline;
 }

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -15,16 +15,16 @@
 
   <body>
     <div class="container">
-
       <header class="header">
         <!-- ЗАПОЛНИТЬ: номер домашки в шапке -->
         <span class="header__page-title">HomeWork №0</span>
       </header>
 
-      <a href="../pages/categories/homeworks.html" class="header__link button">← назад</a>
+      <a href="../pages/categories/homeworks.html" class="header__link button"
+        >← назад</a
+      >
 
       <div class="page-main">
-
         <section class="sidebar">
           <div class="sidebar__container">
             <h3 class="sidebar__title">Навигация</h3>
@@ -138,7 +138,10 @@
               <h3 class="sidebar__title">Темы</h3>
               <ul class="sidebar__list">
                 <li>
-                  <a class="sidebar__link" href="../pages/categories/html-css.html">
+                  <a
+                    class="sidebar__link"
+                    href="../pages/categories/html-css.html"
+                  >
                     <img
                       class="sidebar__img"
                       src="../images/HTML5_logo.png"
@@ -160,7 +163,10 @@
                   </a>
                 </li>
                 <li>
-                  <a class="sidebar__link" href="../pages/categories/html-css.html">
+                  <a
+                    class="sidebar__link"
+                    href="../pages/categories/html-css.html"
+                  >
                     <img
                       class="sidebar__img"
                       src="../images/CSS3_logo.png"
@@ -193,7 +199,10 @@
                   </a>
                 </li>
                 <li>
-                  <a class="sidebar__link" href="../pages/categories/vscode.html">
+                  <a
+                    class="sidebar__link"
+                    href="../pages/categories/vscode.html"
+                  >
                     <img
                       class="sidebar__img"
                       src="../images/Visual_Studio_Code.png"
@@ -209,18 +218,22 @@
         </section>
 
         <section class="page-main__content">
-          <section class="content">
-
+          <section class="content__container">
             <!-- ====== ЗАГОЛОВОК И ВВОДНАЯ ЧАСТЬ ====== -->
             <h1 class="content__title">Название темы</h1>
 
-            <p class="content__text">Короткое описание: о чём эта домашка и зачем эта тема нужна. Пиши текст одной строкой — у .content__text включён white-space: pre-line, поэтому каждый перенос строки в коде станет переносом на странице.</p>
+            <p class="content__text">
+              Короткое описание: о чём эта домашка и зачем эта тема нужна. Пиши
+              текст одной строкой — у .content__text включён white-space:
+              pre-line, поэтому каждый перенос строки в коде станет переносом на
+              странице.
+            </p>
 
             <!-- ====== СОДЕРЖАНИЕ (можно удалить, если тема короткая) ======
                  Якоря работают так: здесь href="#nazvanie",
                  а у нужного блока ниже ставим id="nazvanie" -->
             <div>
-              <p class="subTitle">Содержание:</p>
+              <p class="content__subtitle">Содержание:</p>
               <ol>
                 <li><a href="#part-1">Первый раздел</a></li>
                 <li><a href="#part-2">Второй раздел</a></li>
@@ -228,16 +241,20 @@
             </div>
 
             <!-- ====== РАЗДЕЛ ====== -->
-            <p class="subTitle" id="part-1">Первый раздел</p>
+            <p class="content__subtitle" id="part-1">Первый раздел</p>
 
-            <p class="content__text">Объяснение темы. Термин внутри текста выделяем так: <code>git status</code>.</p>
+            <p class="content__text">
+              Объяснение темы. Термин внутри текста выделяем так:
+              <code>git status</code>.
+            </p>
 
             <!-- пример кода: внутри тега переносы и отступы сохраняются как есть -->
-            <p class="codeText">const numbers = [1, 2, 3];
-console.log(numbers);</p>
+            <p class="codeText">
+              const numbers = [1, 2, 3]; console.log(numbers);
+            </p>
 
             <!-- ====== РАЗДЕЛ СО СПИСКОМ ====== -->
-            <p class="subTitle" id="part-2">Второй раздел</p>
+            <p class="content__subtitle" id="part-2">Второй раздел</p>
 
             <ul class="content__list">
               <li><code>метод()</code> — что делает.</li>
@@ -248,12 +265,15 @@ console.log(numbers);</p>
                  Для длинных пояснений, чтобы не растягивать страницу.
                  Открывается по клику, закрыт по умолчанию -->
             <details>
-              <summary class="content__accordion">Пояснение с самого нуля</summary>
-              <p class="content__text">Длинный текст для тех, кто совсем не в теме.</p>
+              <summary class="content__accordion">
+                Пояснение с самого нуля
+              </summary>
+              <p class="content__text">
+                Длинный текст для тех, кто совсем не в теме.
+              </p>
             </details>
           </section>
         </section>
-
       </div>
 
       <footer class="footer">
@@ -261,11 +281,13 @@ console.log(numbers);</p>
         <section class="footer__nav">
           <p class="footer__text-nav">О нашей команде</p>
           <a href="https://t.me/Talyba_dev"
-            ><img class="footer__image" alt="Телеграм" src="../images/telegram-icon.png"
+            ><img
+              class="footer__image"
+              alt="Телеграм"
+              src="../images/telegram-icon.png"
           /></a>
         </section>
       </footer>
-
     </div>
   </body>
 </html>
