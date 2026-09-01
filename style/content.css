@@ -112,17 +112,33 @@ code {
   text-decoration: underline;
 }
 
+.content__note {
+  background-color: #1b2235;
+  border: 1px solid #292e3a;
+  border-left: 4px solid #3f79c9;
+  border-radius: 5px;
+  padding: 12px 16px;
+}
+
+.content__note strong {
+  color: #ffffff;
+}
+
 .content--article .content__text li {
   list-style: disc;
 }
 
-/* Онлайн-компилятор. У редактора кода свои пропорции: соотношение сторон
-   ему не подходит, нужна фиксированная высота, иначе на узком экране
-   он вытягивается в бесполезную «колонку». */
+/* Оглавление домашки — нумерованный список. Глобальное
+   ul, li, ol { list-style-type: none } снимает маркеры и с ol, возвращаем цифры */
+.content--article .content__text ol li {
+  list-style: decimal;
+}
+
+/* Онлайн-компилятор. На узком экране редактор кода бесполезен — в него не
+   помещается ни строка кода, ни консоль, поэтому там он скрыт. Ссылка под
+   ним остаётся и открывает компилятор отдельной вкладкой. */
 .responsive-iframe--compiler {
-  aspect-ratio: auto;
-  height: 420px;
-  border-radius: 5px;
+  display: none;
 }
 
 /* Запасной вариант: если эмбед вырежет блокировщик рекламы,
@@ -146,28 +162,17 @@ code {
   }
 
   .responsive-iframe--compiler {
+    display: block;
     width: 100%;
     aspect-ratio: auto;
     height: 520px;
+    border-radius: 5px;
   }
 }
 
-/* Врезка «💡 Зачем нужны комментарии?» — та же карточка, что у categories__card,
-   с синей полосой слева, как у content__subtitle */
-.content__note {
-  background-color: #1b2235;
-  border: 1px solid #292e3a;
-  border-left: 4px solid #3f79c9;
-  border-radius: 5px;
-  padding: 12px 16px;
-}
-
-.content__note strong {
-  color: #ffffff;
-}
 
 /* Блок практического задания */
-.practice {
+.content__practice {
   background-color: #161b29;
   border: 1px solid #292e3a;
   border-radius: 5px;
