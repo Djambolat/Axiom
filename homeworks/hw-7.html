@@ -1,30 +1,215 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style/style.css" />
-    <link rel="stylesheet" href="../style/header.css" />
-    <link rel="stylesheet" href="../style/content.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="container">
-      <header class="header">
-        <span class="header__page-title">HomeWork -7</span>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style/style.css">
+  <link rel="stylesheet" href="../style/header.css">
+  <link rel="stylesheet" href="../style/content.css">
+  <link rel="stylesheet" href="../style/sidebar.css">
+  <title>Домашнее задание №7 — Axiom</title>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+        <span class="header__page-title">HomeWork №7</span>
         <nav class="header__nav">
-          <a href="../index.html" class="header__link">на главную</a>
+          <button class="header__burger" type="button" aria-label="Меню">☰</button>
         </nav>
-      </header>
-      <section class="content">
-        <!-- <details> -->
-        <!-- <summary class="content__accordion">Пояснение с самого нуля</summary> -->
-        <div class="content__text">
+    </header>
+
+    <a href="../pages/categories/homeworks.html" class="header__link button">← назад</a>
+    <div class="page-main">
+      <section class="sidebar">
+        <div class="sidebar__container">
+          <h3 class="sidebar__title">Навигация</h3>
+          <a class="sidebar__nav" href="../index.html">Главная страница</a>
+          <div class="sidebar__block">
+            <p class="sidebar__text adaptive-text-medium">Домашние задания</p>
+            <ul class="sidebar__list sidebar__list--scroll">
+              <li>
+                <span class="sidebar__link sidebar__link--disabled"
+                  >Домашнее задание №20</span
+                >
+              </li>
+              <li>
+                <span class="sidebar__link sidebar__link--disabled"
+                  >Домашнее задание №19</span
+                >
+              </li>
+              <li>
+                <span class="sidebar__link sidebar__link--disabled"
+                  >Домашнее задание №18</span
+                >
+              </li>
+              <li>
+                <span class="sidebar__link sidebar__link--disabled"
+                  >Домашнее задание №17</span
+                >
+              </li>
+              <li>
+                <span class="sidebar__link sidebar__link--disabled"
+                  >Домашнее задание №16</span
+                >
+              </li>
+              <li>
+                <span class="sidebar__link sidebar__link--disabled"
+                  >Домашнее задание №15</span
+                >
+              </li>
+              <li>
+                <span class="sidebar__link sidebar__link--disabled"
+                  >Домашнее задание №14</span
+                >
+              </li>
+              <li>
+                <span class="sidebar__link sidebar__link--disabled"
+                  >Домашнее задание №13</span
+                >
+              </li>
+              <li>
+                <span class="sidebar__link sidebar__link--disabled"
+                  >Домашнее задание №12</span
+                >
+              </li>
+              <li>
+                <span class="sidebar__link sidebar__link--disabled"
+                  >Домашнее задание №11</span
+                >
+              </li>
+              <li>
+                <span class="sidebar__link sidebar__link--disabled"
+                  >Домашнее задание №10</span
+                >
+              </li>
+              <li>
+                <a class="sidebar__link" href="../homeworks/hw-9.html"
+                  >Домашнее задание №9</a
+                >
+              </li>
+              <li>
+                <span class="sidebar__link sidebar__link--disabled"
+                  >Домашнее задание №8</span
+                >
+              </li>
+              <li>
+                <a class="sidebar__link" href="../homeworks/hw-7.html"
+                  >Домашнее задание №7</a
+                >
+              </li>
+              <li>
+                <span class="sidebar__link sidebar__link--disabled"
+                  >Домашнее задание №6</span
+                >
+              </li>
+              <li>
+                <span class="sidebar__link sidebar__link--disabled"
+                  >Домашнее задание №5</span
+                >
+              </li>
+              <li>
+                <span class="sidebar__link sidebar__link--disabled"
+                  >Домашнее задание №4</span
+                >
+              </li>
+              <li>
+                <span class="sidebar__link sidebar__link--disabled"
+                  >Домашнее задание №3</span
+                >
+              </li>
+              <li>
+                <span class="sidebar__link sidebar__link--disabled"
+                  >Домашнее задание №2</span
+                >
+              </li>
+              <li>
+                <span class="sidebar__link sidebar__link--disabled"
+                  >Домашнее задание №1</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="sidebar__block">
+            <h3 class="sidebar__title">Темы</h3>
+            <ul class="sidebar__list">
+              <li>
+                <a class="sidebar__link" href="../pages/categories/html-css.html">
+                  <img
+                    class="sidebar__img"
+                    src="../images/HTML5_logo.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span class="sidebar__link-text">HTML</span>
+                </a>
+              </li>
+              <li>
+                <a class="sidebar__link" href="../pages/categories/js.html">
+                  <img
+                    class="sidebar__img"
+                    src="../images/JavaScript-logo.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span class="sidebar__link-text">JavaScript</span>
+                </a>
+              </li>
+              <li>
+                <a class="sidebar__link" href="../pages/categories/html-css.html">
+                  <img
+                    class="sidebar__img"
+                    src="../images/CSS3_logo.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span class="sidebar__link-text">CSS</span>
+                </a>
+              </li>
+              <li>
+                <a class="sidebar__link" href="../pages/categories/bem.html">
+                  <img
+                    class="sidebar__img"
+                    src="../images/bem_logo.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span class="sidebar__link-text">БЭМ</span>
+                </a>
+              </li>
+              <li>
+                <a class="sidebar__link" href="../pages/categories/git.html">
+                  <img
+                    class="sidebar__img"
+                    src="../images/Git_logo.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span class="sidebar__link-text">Git</span>
+                </a>
+              </li>
+              <li>
+                <a class="sidebar__link" href="../pages/categories/vscode.html">
+                  <img
+                    class="sidebar__img"
+                    src="../images/Visual_Studio_Code.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span class="sidebar__link-text">VS Code</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="page-main__content">
+        <section class="content content--article">
+          <div class="content__text">
           <p class="subTitle">Вводная информация</p>
           JavaScript делает сайт интерактивным и позволяет реагировать на
           действия пользователя: нажатия кнопок, скроллинг, ввод текста и другие
           события.
-          <ol class="content__list">
+          <ol class="content__text-list">
             <li><a href="#comments">Комментарии</a></li>
             <li><a href="#data-types">Типы данных</a></li>
             <li><a href="#typeof">typeof</a></li>
@@ -40,21 +225,17 @@
           <p class="subTitle" id="comments">1. Комментарии</p>
           Комментарий — это текст внутри кода, который JavaScript не выполняет.
           Существует следующие виды коментариев:
-          <ul class="content__list">
+          <ul class="content__text-list">
             <li>
               <span>Однострочный комментарий</span>
-              <pre class="codeText"><code>
-                // Это комментарий
-                const name = "Тимон";
-              </code></pre>
+              <pre class="codeText"><code>// Это комментарий
+const name = "Тимон";</code></pre>
             </li>
             <li>
               <span>Многострочный комментарий</span>
-              <pre class="codeText"><code>
-                /*Это 
-                многострочный 
-                комментарий*/
-              </code></pre>
+              <pre class="codeText"><code>/*Это 
+многострочный 
+комментарий*/</code></pre>
               <div class="homework__note">
                 <strong>💡 Зачем нужны комментарии?</strong>
                 <p>
@@ -68,7 +249,7 @@
             JavaScript работает с разными типами значений. На начальном этапе
             нам особенно важно понимать:
           </p>
-          <ul class="content__list">
+          <ul class="content__text-list">
             <li><strong>Number</strong> — числа</li>
             <li><strong>String</strong> — строки</li>
             <li><strong>Boolean</strong> — true или false</li>
@@ -78,30 +259,26 @@
               <strong>Object</strong> — объекты, массивы и другие конструкции
             </li>
           </ul>
-          <pre class="codeText"><code>
-            Пример:
-            const age = 20;
-            const name = "Тимон";
-            const isStudent = true;
-          </code></pre>
+          <p>Пример:</p>
+          <pre class="codeText"><code>const age = 20;
+const name = "Тимон";
+const isStudent = true;</code></pre>
 
           <p class="subTitle" id="typeof">3. typeof</p>
           <p>Оператор <code>typeof</code> позволяет узнать тип значения.</p>
 
-          <pre class="codeText"><code>
-              const age = 20;
-              console.log(typeof age);
-              // "number"
+          <pre class="codeText"><code>const age = 20;
+console.log(typeof age);
+// "number"
 
-              const name = "Тимон";
-              console.log(typeof name);
-              // "string"
-            </code></pre>
+const name = "Тимон";
+console.log(typeof name);
+// "string"</code></pre>
           <div class="homework__note">
             <strong>⚠️ Интересный момент</strong>
             <p>
-              У <code class="codeText">typeof null</code> результатом будет
-              <code class="codeText">"object"</code>. Это историческая
+              У <code>typeof null</code> результатом будет
+              <code>"object"</code>. Это историческая
               особенность JavaScript.
             </p>
           </div>
@@ -110,28 +287,22 @@
             Переменная — это имя (контейнер), под которым мы можем хранить
             значение.
           </p>
-          <pre class="codeText"><code>
-            let name = "Тимон";
-          </code></pre>
+          <pre class="codeText"><code>let name = "Тимон";</code></pre>
           <p>Здесь:</p>
-          <ul class="content__list">
-            <li><code class="codeText">let</code> — ключевое слово;</li>
-            <li><code class="codeText">name</code> — имя переменной;</li>
-            <li><code class="codeText">=</code> — оператор присваивания;</li>
-            <li><code class="codeText">"Тимон"</code> — значение.</li>
+          <ul class="content__text-list">
+            <li><code>let</code> — ключевое слово;</li>
+            <li><code>name</code> — имя переменной;</li>
+            <li><code>=</code> — оператор присваивания;</li>
+            <li><code>"Тимон"</code> — значение.</li>
           </ul>
-          <h3>let</h3>
+          <h3 class="content__text-title">let</h3>
           <p>Используем, если значение переменной может измениться.</p>
-          <pre class="codeText"><code>
-              let age = 20;
-              age = 21;
-          </code></pre>
-          <h3>const</h3>
+          <pre class="codeText"><code>let age = 20;
+age = 21;</code></pre>
+          <h3 class="content__text-title">const</h3>
           <p>Используем, если переменную не планируем переприсваивать.</p>
-          <pre class="codeText"><code>
-              const name = "Тимон";
-          </code></pre>
-          <h3>var</h3>
+          <pre class="codeText"><code>const name = "Тимон";</code></pre>
+          <h3 class="content__text-title">var</h3>
           <p>
             Старый способ объявления переменных. В современном коде обычно
             используют <code>let</code> и <code>const</code>.
@@ -142,27 +313,22 @@
             JavaScript может автоматически преобразовывать значения одного типа
             в другой.
           </p>
-          <pre class="codeText"><code>
-              Пример
-              "5" + 2; // "52"
-            </code></pre>
+          <p>Пример:</p>
+          <pre class="codeText"><code>"5" + 2; // "52"</code></pre>
           <p>
             При использовании <code>+</code> со строкой происходит объединение
             строк — конкатенация.
           </p>
-          <pre><code class="codeText">
-              "5" - 2; // 3
-            </code></pre>
+          <pre class="codeText"><code>"5" - 2; // 3</code></pre>
           <p>
             В этом случае JavaScript преобразует строку
             <code>"5"</code> в число.
           </p>
-          <h3>Явное преобразование</h3>
-          <pre><code class="codeText">Number("123");
-              // 123
-              String(123); // "123"
-              Boolean(1); // true
-            </code></pre>
+          <h3 class="content__text-title">Явное преобразование</h3>
+          <pre class="codeText"><code>Number("123");
+// 123
+String(123); // "123"
+Boolean(1); // true</code></pre>
           <!-- COMPARISON -->
           <p class="subTitle" id="comparison">6. Операторы сравнения</p>
           <p>
@@ -171,80 +337,66 @@
           </p>
           <pre class="codeText"><code>const age = 20;</code></pre>
           <p>Здесь <code>=</code> присваивает значение переменной.</p>
-          <pre class="codeText"><code>
-              age === 20; // true
-            </code></pre>
+          <pre class="codeText"><code>age === 20; // true</code></pre>
 
-          <p><code class="codeText">===</code> сравнивает значение и тип.</p>
+          <p><code>===</code> сравнивает значение и тип.</p>
 
-          <pre class="codeText"><code>
-              20 === "20"; // false
-            </code></pre>
+          <pre class="codeText"><code>20 === "20"; // false</code></pre>
 
           <div class="homework__note">
             <strong>💡 Совет</strong>
             <p>
               В современном JavaScript обычно предпочитают строгое сравнение
-              <code class="codeText">===</code>.
+              <code>===</code>.
             </p>
           </div>
           <p class="subTitle" id="strings">7. Строки и шаблонные строки</p>
           <p>
             Строки можно объединять с помощью оператора
-            <code class="codeText">+</code>.
+            <code>+</code>.
           </p>
-          <pre class="codeText"><code>
-              const name = "Тимон";
-              const age = 20;
-              console.log("Привет, меня зовут " + name +", мне " + age + " лет.");
-            </code></pre>
-          <h3>Шаблонные строки</h3>
+          <pre class="codeText"><code>const name = "Тимон";
+const age = 20;
+console.log("Привет, меня зовут " + name +", мне " + age + " лет.");</code></pre>
+          <h3 class="content__text-title">Шаблонные строки</h3>
           <p>
             Более удобный вариант — использовать обратные кавычки и
             интерполяцию.
           </p>
-          <pre class="codeText"><code>
-              const name = "Тимон";
-              const age = 20;
-              console.log(`Привет, меня зовут ${name}, мне ${age} лет.`);
-            </code></pre>
+          <pre class="codeText"><code>const name = "Тимон";
+const age = 20;
+console.log(`Привет, меня зовут ${name}, мне ${age} лет.`);</code></pre>
           <!-- FUNCTIONS -->
           <p class="subTitle" id="functions">8. Функции</p>
           <p>
             Функция — это блок кода, который можно вызвать, когда он
             понадобится.
           </p>
-          <pre class="codeText"><code>
-              function sayHello() {
-               console.log("Привет!");}
-              sayHello();
-            </code></pre>
+          <pre class="codeText"><code>function sayHello() {
+ console.log("Привет!");}
+sayHello();</code></pre>
           <p>Сначала мы объявили функцию, затем вызвали её.</p>
-          <h3>Параметры и аргументы</h3>
-          <pre class="codeText"><code>
-              function sayHello(name) {
-              console.log(`Привет, ${name}!`);}
-              sayHello("Тимон");
-            </code></pre>
-          <ul>
-            <li><code class="codeText">name</code> — параметр;</li>
-            <li><code class="codeText">"Тимон"</code> — аргумент.</li>
+          <h3 class="content__text-title">Параметры и аргументы</h3>
+          <pre class="codeText"><code>function sayHello(name) {
+console.log(`Привет, ${name}!`);}
+sayHello("Тимон");</code></pre>
+          <ul class="content__text-list">
+            <li><code>name</code> — параметр;</li>
+            <li><code>"Тимон"</code> — аргумент.</li>
           </ul>
-          <h3>return</h3>
+          <h3 class="content__text-title">return</h3>
           <p>
-            <code class="codeText">return</code> возвращает значение из функции.
+            <code>return</code> возвращает значение из функции.
           </p>
-          <pre class="codeText"><code>
-              function sum(a, b) {
-              return a + b;}
-              const result = sum(5, 10);
-              console.log(result); // 15
-            </code></pre>
+          <pre class="codeText"><code>function sum(a, b) {
+return a + b;}
+const result = sum(5, 10);
+console.log(result); // 15</code></pre>
           <div class="homework__note">
             <strong>⚠️ Не путай</strong>
             <p>
-              <code class="codeText">console.log()</code> выводит информацию в
-              консоль, а <code class="codeText">return</code> возвращает
+              <code>console.log()</code> выводит информацию в
+              консоль, а <code>return</code> возвращает
               значение из функции.
             </p>
           </div>
@@ -253,10 +405,8 @@
           <p>
             Стрелочная функция позволяет записывать функции более компактно.
           </p>
-          <pre class="codeText"><code>
-              const sum = (a, b) => {
-              return a + b;};
-            </code></pre>
+          <pre class="codeText"><code>const sum = (a, b) => {
+return a + b;};</code></pre>
           <p>
             Если функция состоит из одного выражения, её можно записать ещё
             короче:
@@ -269,36 +419,31 @@
             зависимости от ситуации.
           </p>
           <pre class="codeText"><code>const age = 20;
-              if (age >= 18) {
-              console.log("Доступ разрешён");
-              } else {
-              console.log("Доступ запрещён");}
-            </code></pre>
-          <h3>Несколько условий</h3>
+if (age >= 18) {
+console.log("Доступ разрешён");
+} else {
+console.log("Доступ запрещён");}</code></pre>
+          <h3 class="content__text-title">Несколько условий</h3>
           <pre class="codeText"><code>if (age < 18) {
-              console.log("Несовершеннолетний");
-              } else if (age === 18) {
-              console.log("Только исполнилось 18");
-              } else {
-              console.log("Совершеннолетний");}
-            </code></pre>
-          <h3>Тернарный оператор</h3>
+console.log("Несовершеннолетний");
+} else if (age === 18) {
+console.log("Только исполнилось 18");
+} else {
+console.log("Совершеннолетний");}</code></pre>
+          <h3 class="content__text-title">Тернарный оператор</h3>
           <p>Простое условие иногда можно записать короче:</p>
-          <pre
-            class="codeText"
-          ><code>const access = age >= 18 ? "Разрешён": "Запрещён";
-            </code></pre>
+          <pre class="codeText"><code>const access = age >= 18 ? "Разрешён": "Запрещён";</code></pre>
           <!-- PRACTICE -->
-          <p id="practice">🧩 Попробуй сам</p>
+          <p class="subTitle" id="practice">🧩 Попробуй сам</p>
           <article class="practice">
-            <h3>Задание 1</h3>
+            <h3 class="content__text-title">Задание 1</h3>
             <p>
-              Создай переменную <code class="codeText">userName</code>и положи в
+              Создай переменную <code>userName</code>и положи в
               неё своё имя.
             </p>
           </article>
           <article class="practice">
-            <h3>Задание 2</h3>
+            <h3 class="content__text-title">Задание 2</h3>
             <p>
               Создай функцию <code>getAccess(age)</code>, которая возвращает:
             </p>
@@ -309,16 +454,16 @@
             <pre class="codeText"><code>"Доступ запрещён"</code></pre>
           </article>
           <article class="practice">
-            <h3>Задание 3</h3>
+            <h3 class="content__text-title">Задание 3</h3>
             <p>
               Создай функцию
-              <code class="codeText">getGreeting(name, age)</code>, которая
+              <code>getGreeting(name, age)</code>, которая
               возвращает:
             </p>
-            <pre><code class="codeText">Привет, Тимон! Тебе 20 лет.</code></pre>
+            <pre class="codeText"><code>Привет, Тимон! Тебе 20 лет.</code></pre>
           </article>
           <!-- CHECKLIST -->
-          <h2>✅ Чеклист</h2>
+          <p class="subTitle">✅ Чеклист</p>
           <ul class="homework__checklist">
             <li>Понимаю основные типы данных</li>
             <li>Умею использовать <code>typeof</code></li>
@@ -333,19 +478,68 @@
             <li>Понимаю тернарный оператор</li>
           </ul>
           <b>Проверь себя</b>
-          <iframe
-            class="responsive-iframe"
-            src="https://www.programiz.com/javascript/online-compiler/"
-            title="Описание страницы"
-          >
-          </iframe>
-
-          <!-- </details> -->
-        </div>
-        <!-- .content__text -->
+          <iframe class="responsive-iframe responsive-iframe--compiler" src="https://onecompiler.com/embed/javascript?theme=dark&amp;hideLanguageSelection=true&amp;hideNewFileOption=true&amp;hideTitle=true" title="Онлайн-компилятор JavaScript" loading="lazy"></iframe>
+          <p class="iframe-fallback">Не загрузился редактор? <a href="https://onecompiler.com/javascript" target="_blank" rel="noopener">Открыть компилятор в новой вкладке</a></p>
+          </div>
+        </section>
       </section>
-      <!-- .content -->
     </div>
-    <!-- .container -->
-  </body>
+  </div>
+    <div class="header__menu">
+
+      <button class="header__menu-close" type="button" aria-label="Закрыть меню">
+        ✕
+      </button>
+
+      <nav class="header__burger-nav">
+        <ul class="header__burger-list">
+          <li>
+            <a href="../index.html">Главная</a>
+          </li>
+
+          <li>
+            <a
+              class="button header__menu-guide"
+              href="../pages/navigation/guide.html"
+            >
+              Гайд для чайников
+            </a>
+          </li>
+
+          <li>
+            <a href="../pages/categories/homeworks.html">
+              Домашние задания
+            </a>
+          </li>
+
+          <li>
+            <a href="../pages/categories/bem.html">
+              Методология БЭМ
+            </a>
+          </li>
+
+          <li>
+            <a href="../pages/categories/git.html">
+              Git
+            </a>
+          </li>
+
+          <li>
+            <a href="../pages/categories/js.html">
+              JavaScript
+            </a>
+          </li>
+
+          <li>
+            <a href="https://t.me/Talyba_dev">
+              О нашей команде
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <script src="../script/script.js"></script>
+</body>
 </html>

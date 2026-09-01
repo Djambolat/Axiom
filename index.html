@@ -3,21 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Axiom</title>
+
+    <title>Axiom.beta</title>
+
     <link rel="stylesheet" href="./style/style.css" />
     <link rel="stylesheet" href="./style/header.css" />
     <link rel="stylesheet" href="./style/sidebar.css" />
     <link rel="stylesheet" href="./style/content.css" />
-    <script src="//code.jivo.ru/widget/PX5cOYZWQK" async></script>
+
+    <script src="https://code.jivo.ru/widget/PX5cOYZWQK" async></script>
   </head>
+
   <body>
     <div class="container">
       <header class="header">
-        <a href="index.html" class="header__logo">Axiom</a>
+        <a href="./index.html" class="header__logo">Axiom</a>
+
         <nav class="header__nav">
-          <a href="./pages/navigation/guide.html" class="header__link"
-            >Гайд для чайников</a
-          >
+          <a class="hero__button button" href="./pages/navigation/guide.html">
+            Гайд для чайников
+          </a>
+
+          <button class="header__burger" type="button" aria-label="Меню">
+            ☰
+          </button>
         </nav>
       </header>
 
@@ -25,80 +34,221 @@
         <section class="sidebar">
           <div class="sidebar__container">
             <h3 class="sidebar__title">Навигация</h3>
-            <p class="sidebar__nav">Главная страница</p>
-            <p></p>
+
+            <a
+              class="sidebar__nav sidebar__nav--active"
+              href="./index.html"
+              aria-current="page"
+            >
+              Главная страница
+            </a>
+
             <div class="sidebar__block">
               <p class="sidebar__text adaptive-text-medium">Домашние задания</p>
-              <ul class="sidebar__list">
+
+              <ul class="sidebar__list sidebar__list--scroll">
                 <li>
-                  <a class="sidebar__link" href="homeworks/hw-9.html"
-                    >Домашнее задание №9</a
-                  >
+                  <span class="sidebar__link sidebar__link--disabled">
+                    Домашнее задание №20
+                  </span>
                 </li>
-                <li><a class="sidebar__link">Домашнее задание №8</a></li>
+
                 <li>
-                  <a class="sidebar__link" href="homeworks/hw-7.html"
-                    >Домашнее задание №7</a
-                  >
+                  <span class="sidebar__link sidebar__link--disabled">
+                    Домашнее задание №19
+                  </span>
                 </li>
-                <li><a class="sidebar__link">Домашнее задание №6</a></li>
-                <li><a class="sidebar__link">Домашнее задание №5</a></li>
+
+                <li>
+                  <span class="sidebar__link sidebar__link--disabled">
+                    Домашнее задание №18
+                  </span>
+                </li>
+
+                <li>
+                  <span class="sidebar__link sidebar__link--disabled">
+                    Домашнее задание №17
+                  </span>
+                </li>
+
+                <li>
+                  <span class="sidebar__link sidebar__link--disabled">
+                    Домашнее задание №16
+                  </span>
+                </li>
+
+                <li>
+                  <span class="sidebar__link sidebar__link--disabled">
+                    Домашнее задание №15
+                  </span>
+                </li>
+
+                <li>
+                  <span class="sidebar__link sidebar__link--disabled">
+                    Домашнее задание №14
+                  </span>
+                </li>
+
+                <li>
+                  <span class="sidebar__link sidebar__link--disabled">
+                    Домашнее задание №13
+                  </span>
+                </li>
+
+                <li>
+                  <span class="sidebar__link sidebar__link--disabled">
+                    Домашнее задание №12
+                  </span>
+                </li>
+
+                <li>
+                  <span class="sidebar__link sidebar__link--disabled">
+                    Домашнее задание №11
+                  </span>
+                </li>
+
+                <li>
+                  <span class="sidebar__link sidebar__link--disabled">
+                    Домашнее задание №10
+                  </span>
+                </li>
+
+                <li>
+                  <a class="sidebar__link" href="./homeworks/hw-9.html">
+                    Домашнее задание №9
+                  </a>
+                </li>
+
+                <li>
+                  <span class="sidebar__link sidebar__link--disabled">
+                    Домашнее задание №8
+                  </span>
+                </li>
+
+                <li>
+                  <a class="sidebar__link" href="./homeworks/hw-7.html">
+                    Домашнее задание №7
+                  </a>
+                </li>
+
+                <li>
+                  <span class="sidebar__link sidebar__link--disabled">
+                    Домашнее задание №6
+                  </span>
+                </li>
+
+                <li>
+                  <span class="sidebar__link sidebar__link--disabled">
+                    Домашнее задание №5
+                  </span>
+                </li>
+
+                <li>
+                  <span class="sidebar__link sidebar__link--disabled">
+                    Домашнее задание №4
+                  </span>
+                </li>
+
+                <li>
+                  <span class="sidebar__link sidebar__link--disabled">
+                    Домашнее задание №3
+                  </span>
+                </li>
+
+                <li>
+                  <span class="sidebar__link sidebar__link--disabled">
+                    Домашнее задание №2
+                  </span>
+                </li>
+
+                <li>
+                  <span class="sidebar__link sidebar__link--disabled">
+                    Домашнее задание №1
+                  </span>
+                </li>
               </ul>
             </div>
+
             <div class="sidebar__block">
               <h3 class="sidebar__title">Темы</h3>
+
               <ul class="sidebar__list">
                 <li>
-                  <a
-                    class="sidebar__link"
-                    href="./pages/categories/html-css.html"
-                    ><img
+                  <a class="sidebar__link" href="./pages/categories/html-css.html">
+                    <img
                       class="sidebar__img"
-                      src="images/HTML5_logo.png"
-                    />HTML</a
-                  >
+                      src="./images/HTML5_logo.png"
+                      alt=""
+                      loading="lazy"
+                    />
+
+                    <span class="sidebar__link-text"> HTML </span>
+                  </a>
                 </li>
+
                 <li>
-                  <a class="sidebar__link" href="./pages/categories/js.html"
-                    ><img
+                  <a class="sidebar__link" href="./pages/categories/js.html">
+                    <img
                       class="sidebar__img"
-                      src="images/JavaScript-logo.png"
-                    />Java Script</a
-                  >
+                      src="./images/JavaScript-logo.png"
+                      alt=""
+                      loading="lazy"
+                    />
+
+                    <span class="sidebar__link-text"> JavaScript </span>
+                  </a>
                 </li>
+
                 <li>
-                  <a
-                    class="sidebar__link"
-                    href="./pages/categories/html-css.html"
-                    ><img
+                  <a class="sidebar__link" href="./pages/categories/html-css.html">
+                    <img
                       class="sidebar__img"
-                      src="images/CSS3_logo.png"
-                    />CSS</a
-                  >
+                      src="./images/CSS3_logo.png"
+                      alt=""
+                      loading="lazy"
+                    />
+
+                    <span class="sidebar__link-text"> CSS </span>
+                  </a>
                 </li>
+
                 <li>
-                  <a class="sidebar__link" href="./pages/categories/bem.html"
-                    ><img
+                  <a class="sidebar__link" href="./pages/categories/bem.html">
+                    <img
                       class="sidebar__img"
-                      src="images/bem_logo.png"
-                    />БЭМ</a
-                  >
+                      src="./images/bem_logo.png"
+                      alt=""
+                      loading="lazy"
+                    />
+
+                    <span class="sidebar__link-text"> БЭМ </span>
+                  </a>
                 </li>
+
                 <li>
-                  <a class="sidebar__link" href="./pages/categories/git.html"
-                    ><img
+                  <a class="sidebar__link" href="./pages/categories/git.html">
+                    <img
                       class="sidebar__img"
-                      src="images/Git_logo.png"
-                    />git</a
-                  >
+                      src="./images/Git_logo.png"
+                      alt=""
+                      loading="lazy"
+                    />
+
+                    <span class="sidebar__link-text"> Git </span>
+                  </a>
                 </li>
+
                 <li>
-                  <a class="sidebar__link" href="./pages/categories/vscode.html"
-                    ><img
+                  <a class="sidebar__link" href="./pages/categories/vscode.html">
+                    <img
                       class="sidebar__img"
-                      src="images/Visual_Studio_Code.png"
-                    />VS Code</a
-                  >
+                      src="./images/Visual_Studio_Code.png"
+                      alt=""
+                      loading="lazy"
+                    />
+
+                    <span class="sidebar__link-text"> VS Code </span>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -107,30 +257,41 @@
 
         <section class="page-main__content">
           <section class="page-main__hero">
-            <h1 class="adaptive-text-big">Материалы курса веб-разработки</h1>
-            <p class="adaptive-text-medium">
+            <h1 class="hero__title adaptive-text-big">
+              Материалы курса веб-разработки
+            </h1>
+
+            <p class="hero__text adaptive-text-medium">
               Всё, что нужно для практики веб-разработки здесь
             </p>
           </section>
 
           <section class="page-main__categories">
             <a href="./pages/categories/html-css.html" class="categories__card">
-              <span class="categories__card-title">HTML / CSS</span>
+              <span class="categories__card-title"> HTML / CSS </span>
             </a>
+
             <a href="./pages/categories/js.html" class="categories__card">
-              <span class="categories__card-title">JavaScript</span>
+              <span class="categories__card-title"> JavaScript </span>
             </a>
+
             <a href="./pages/categories/git.html" class="categories__card">
-              <span class="categories__card-title">Git</span>
+              <span class="categories__card-title"> Git </span>
             </a>
+
             <a href="./pages/categories/bem.html" class="categories__card">
-              <span class="categories__card-title">BEM</span>
+              <span class="categories__card-title"> BEM </span>
             </a>
+
             <a href="./pages/categories/vscode.html" class="categories__card">
-              <span class="categories__card-title">VS Code</span>
+              <span class="categories__card-title"> VS Code </span>
             </a>
-            <a href="pages/categories/homeworks.html" class="categories__card">
-              <span class="categories__card-title">Homeworks</span>
+
+            <a
+              href="./pages/categories/homeworks.html"
+              class="categories__card"
+            >
+              <span class="categories__card-title"> Homeworks </span>
             </a>
           </section>
         </section>
@@ -138,10 +299,64 @@
 
       <footer class="footer">
         <p class="footer__text">Axiom &mdash; 2026</p>
-        <p class="footer__text">всякие иконки</p>
+        <section class="footer__nav">
+          <p class="footer__text-nav">О нашей команде</p>
+          <a href="https://t.me/Talyba_dev"
+            ><img class="footer__image" src="images/telegram-icon.png"
+          /></a>
+        </section>
       </footer>
     </div>
 
-    <script src="script/script.js"></script>
+    <!-- Мобильное меню: лежит в конце body, чтобы над ним не было
+         sticky-шапки — иначе fixed считается от неё, а не от экрана -->
+    <div class="header__menu">
+      <button
+        class="header__menu-close"
+        type="button"
+        aria-label="Закрыть меню"
+      >
+        ✕
+      </button>
+
+      <nav class="header__burger-nav">
+        <ul class="header__burger-list">
+          <li>
+            <a href="index.html">Главная</a>
+          </li>
+
+          <li>
+            <a
+              class="button header__menu-guide"
+              href="pages/navigation/guide.html"
+            >
+              Гайд для чайников
+            </a>
+          </li>
+
+          <li>
+            <a href="pages/categories/homeworks.html"> Домашние задания </a>
+          </li>
+
+          <li>
+            <a href="pages/categories/bem.html"> Методология БЭМ </a>
+          </li>
+
+          <li>
+            <a href="pages/categories/git.html"> Git </a>
+          </li>
+
+          <li>
+            <a href="pages/categories/js.html"> JavaScript </a>
+          </li>
+
+          <li>
+            <a href="https://t.me/Talyba_dev"> О нашей команде </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Main JavaScript -->
+    <script src="./script/script.js"></script>
   </body>
 </html>

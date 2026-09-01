@@ -4,7 +4,7 @@
 
 ## Демо
 
-[Ссылка на GitHub Pages будет здесь после деплоя]
+[ https://djambolat.github.io/Axiom/ ]
 
 ## Как запустить локально
 
