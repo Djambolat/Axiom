@@ -330,6 +330,10 @@ console.log(typeof name);
                 Переменная — это имя (контейнер), под которым мы можем хранить
                 значение.
               </p>
+              <p>
+                Можно тремя способами объявить переменную через
+                <code>let, const, var</code>Пример:
+              </p>
               <pre class="codeText"><code>let name = "Тимон";</code></pre>
               <p>Здесь:</p>
               <ul class="content__text-list">
@@ -338,17 +342,20 @@ console.log(typeof name);
                 <li><code>=</code> — оператор присваивания;</li>
                 <li><code>"Тимон"</code> — значение.</li>
               </ul>
-              <h3 class="content__text-title">let</h3>
+              <h3 class="content__text-title"><code>let</code></h3>
               <p>Используем, если значение переменной может измениться.</p>
               <pre class="codeText"><code>let age = 20;
 age = 21;</code></pre>
-              <h3 class="content__text-title">const</h3>
+              <h3 class="content__text-title"><code>const</code></h3>
               <p>Используем, если переменную не планируем переприсваивать.</p>
               <pre class="codeText"><code>const name = "Тимон";</code></pre>
-              <h3 class="content__text-title">var</h3>
+              <h3 class="content__text-title"><code>var</code></h3>
               <p>
-                Старый способ объявления переменных. В современном коде обычно
-                используют <code>let</code> и <code>const</code>.
+                Старый способ объявления переменных. Редко используется из за
+                эффекта всплытия: когда переменную можно использовать раньше чем
+                ее объявили. Так можно поступить только с <code>var</code> и это
+                приводит к путанице. В современном коде обычно используют
+                <code>let</code> и <code>const</code>.
               </p>
 
               <p class="content__subtitle" id="conversion">
@@ -378,6 +385,17 @@ Boolean(1); // true</code></pre>
               <p class="content__subtitle" id="comparison">
                 6. Операторы сравнения
               </p>
+              В JavaScript есть 2 опретора сравнения:
+              <ul class="content__text-list">
+                <li>
+                  <code>==</code> — нестрогое сравнение, которое сравнивает,
+                  только значения
+                </li>
+                <li>
+                  <code>===</code> — строгое сравнение, которое сравнивает и тип
+                  и значение
+                </li>
+              </ul>
               <p>
                 Не путай оператор присваивания <code>=</code> с оператором
                 сравнения <code>===</code>.
