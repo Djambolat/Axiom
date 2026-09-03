@@ -24,11 +24,22 @@
   background-color: #3368b3;
 }
 
-.header__logo {
+.header__logo-link {
   font-weight: bold;
   text-decoration: none;
   color: #ffffff;
   font-size: clamp(20px, 5vw, 25px);
+}
+
+.header__logo{
+  width: 40px;
+  height: 40px;
+}
+.header__logo-container{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 
 .header__page-title {
