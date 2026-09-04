@@ -1,4 +1,5 @@
 .content__container {
+  backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
   gap: 25px;
